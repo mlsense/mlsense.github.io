@@ -60,6 +60,73 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
     </item>
     
     <item>
+      <title>Random Forest explained intuitively</title>
+      <link>https://mlsense.github.io/posts/random_forest_explained_intuitively/</link>
+      <pubDate>Tue, 18 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/random_forest_explained_intuitively/</guid>
+      <description>Title: Random Forest explained intuitively date: 2016-10-18 8:00 comments: true slug: random_forest_explained_intuitively Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post explains random forest intuitively Keywords: random forest, random forest tutorial, data-science, manish barnwal
+Random Forests algorithm has always fascinated me. I like how this algorithm can be easily explained to anyone without much hassle. One quick example, I use very frequently to explain the working of random forests is the way a company has multiple rounds of interview to hire a candidate.</description>
+    </item>
+    
+    <item>
+      <title>Improve runtime of Random Forest in R</title>
+      <link>https://mlsense.github.io/posts/improve_runtime_random_forest_r/</link>
+      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/improve_runtime_random_forest_r/</guid>
+      <description>There are two ways one can write the code to train a random forest model in R. Both the ways are listed below. A normal and frequent way of writing the command to train the random forest model is something like this. rfModel &amp;lt;- randomForest(Survived~. , data = trainSample[, -c(6, 8, 9)])  Notice the ~ sign. We call this the formula way of writing. Another way of writing the command to train the random forest model is shown below.</description>
+    </item>
+    
+    <item>
+      <title>How to install a package of a particular version in R</title>
+      <link>https://mlsense.github.io/posts/install_a_package_particular_version_in_r/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/install_a_package_particular_version_in_r/</guid>
+      <description>I recently tried installing caret package in R using install.packages(&amp;lsquo;caret&amp;rsquo;, dependencies=T) 
+Normally this installation of package works and I continue to work with the functions associated with the package. When I tried including the package using library(caret) 
+I got the following error.
+Error in loadNamespace(j  R was not able to install this dependency package- pbkrtest. So I tried installing it separately, again using install.package(&amp;lsquo;pbkrtest&amp;rsquo;, dependencies=T)</description>
+    </item>
+    
+    <item>
+      <title>Shell commands come in handy for a data scientist</title>
+      <link>https://mlsense.github.io/posts/shell_commands_for_data_scientist/</link>
+      <pubDate>Fri, 30 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/shell_commands_for_data_scientist/</guid>
+      <description>I am no expert of shell commands. I have been using them for quite some time and thought I give an attempt to list down the most common commands. I am writing these mostly from the perspective of a data-science guy. Let us get started. I will use the file- ‘data.txt’ to illustrate these commands. ‘data.txt’ is a file having 200 rows and 8 columns. You can access the data here.</description>
+    </item>
+    
+    <item>
+      <title>ROC and AUC - The three lettered acronyms</title>
+      <link>https://mlsense.github.io/posts/roc_and_auc_three_letter_acronym/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/roc_and_auc_three_letter_acronym/</guid>
+      <description>Confession time I don&amp;rsquo;t feel bad to confess this that ROC curve, AUC, True-positive and related terms took quite some time for me to understand. If today I contemplate on the reasons why I found this topic confusing. The first would be there are not many resources that explains intuitively what these mean. They just jump to the terms and the mathematical formula for them. The second being I had not used them even in my project work.</description>
+    </item>
+    
+    <item>
+      <title>Hadoop Streaming</title>
+      <link>https://mlsense.github.io/posts/hadoop_streaming/</link>
+      <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/hadoop_streaming/</guid>
+      <description>A few days ago, I had written a post on The Big Data Problem{:target=&amp;rdquo;_blank&amp;rdquo;} which attempted to understand why we need big data and what the fuss is all about. You may want to read it here{:target=&amp;rdquo;_blank&amp;rdquo;}. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.</description>
+    </item>
+    
+    <item>
+      <title>When R package is not available across the cluster</title>
+      <link>https://mlsense.github.io/posts/r_packages_not_installed_cluster/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/r_packages_not_installed_cluster/</guid>
+      <description>When deploying R codes across the cluster, many a times the reason for the failure of the task is unavailability of a particular package across all nodes of the cluster. We wait for someone to get the package installed across all the nodes. This may take some days. Do we wait for them? Naah! Presenting a temporary solution that one of my colleague came up with. I have used this technique and this works smoothly.</description>
+    </item>
+    
+    <item>
       <title>The Big Data Problem</title>
       <link>https://mlsense.github.io/posts/big_data_problem/</link>
       <pubDate>Wed, 29 Jun 2016 00:00:00 +0000</pubDate>
@@ -76,77 +143,6 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
       <guid>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</guid>
       <description>Title: Understanding HIVE for data science people date: 2016-06-22 04:43 comments: true slug: understanding_hive_data_science Category: Big Data Tags: hive, hadoop, big data, manish barnwal description: This post is meant for data science folks who want to use and understand HIVE Keywords: Hive, hadoop, big data, , manish barnwal
 I have been working as Statistical analyst for the last 1.5 years and fortunately I got to work on Hadoop on one of my initial projects.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-08-02-r_packages_unavailable_cluster/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-08-02-r_packages_unavailable_cluster/</guid>
-      <description>Title: When R package is not available across the cluster date: 2016-08-02 7:00 comments: true slug: r_packages_not_in_cluster Category: ML, Data Science Tags: R, hacks, manish barnwal description: This post talks about a hack which is useful if a particular R package is unavailable across the cluster Keywords: big data, R, manish barnwal
-When deploying R codes across the cluster, many a times the reason for the failure of the task is unavailability of a particular package across all nodes of the cluster.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-08-29-hadoop_streaming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-08-29-hadoop_streaming/</guid>
-      <description>Title: Hadoop Streaming date: 2016-08-29 7:00 comments: true slug: hadoop_streaming Category: Big Data Tags: big data, hive, tutorial, hadoop, manish barnwal description: This post talks about the hadoop streaming framework Keywords: big data, analytics, hadoop, manish barnwal
-A few days ago, I had written a post on The Big Data Problem{:target=&amp;rdquo;_blank&amp;rdquo;} which attempted to understand why we need big data and what the fuss is all about. You may want to read it here{:target=&amp;rdquo;_blank&amp;rdquo;}.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-09-26-roc-and-auc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-09-26-roc-and-auc/</guid>
-      <description>Title: ROC and AUC - The three lettered acronyms date: 2016-09-26 8:00 comments: true slug: three_letter_acronym_roc_and_auc Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about roc curve and confusion matrix. Keywords: roc, auc, tpr, fpr, probability cut-off, manish barnwal
-I don&amp;rsquo;t feel bad to confess this that ROC curve, AUC, True-positive and related terms took quite some time for me to understand. If today I contemplate on the reasons why I found this topic confusing.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-09-30-shell-commands/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-09-30-shell-commands/</guid>
-      <description>Title: Shell commands come in handy for a data scientist date: 2016-09-30 7:00 comments: true slug: shell_commands_for_data_scientist Category: ML, Data Science Tags: tutorial, hacks, machine-learning, manish barnwal description: This post talks about shell commands that come in handy for data-science people Keywords: shell-commands, manish barnwal
-I am no expert of shell commands. I have been using them for quite some time and thought I give an attempt to list down the most common commands.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-10-05-install-package-of-version/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-10-05-install-package-of-version/</guid>
-      <description>Title: How to install a package of a particular version in R date: 2016-10-05 7:00 comments: true slug: install_a_package_particular_version_in_R Category: ML, Data Science Tags: R, hacks, manish barnwal description: This post explains how to install a package of a particular version in R Keywords: R, package, package version, manish barnwal
-I recently tried installing caret package in R using install.packages(&amp;lsquo;caret&amp;rsquo;, dependencies=T) 
-Normally this installation of package works and I continue to work with the functions associated with the package.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-10-12-random-forest-runtime-fast/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-10-12-random-forest-runtime-fast/</guid>
-      <description>Title: Improve runtime of Random Forest in R date: 2016-10-13 10:00 comments: true slug: improve_runtime_random_forest_r Category: ML, Data Science Tags: machine-learning, hacks, manish barnwal description: This post talks about a trick to improve the runtime of random forest package in R for large datasets Keywords: random forest, hack, manish barnwal
-There are two ways one can write the code to train a random forest model in R. Both the ways are listed below.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-10-18-random-forest-explained/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-10-18-random-forest-explained/</guid>
-      <description>Title: Random Forest explained intuitively date: 2016-10-18 8:00 comments: true slug: random_forest_explained_intuitively Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post explains random forest intuitively Keywords: random forest, random forest tutorial, data-science, manish barnwal
-Random Forests algorithm has always fascinated me. I like how this algorithm can be easily explained to anyone without much hassle. One quick example, I use very frequently to explain the working of random forests is the way a company has multiple rounds of interview to hire a candidate.</description>
     </item>
     
     <item>

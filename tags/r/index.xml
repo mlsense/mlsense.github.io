@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on MlSense</title>
+    <link>https://mlsense.github.io/tags/r/</link>
+    <description>Recent content in R on MlSense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mlsense.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>When R package is not available across the cluster</title>
+      <link>https://mlsense.github.io/posts/r_packages_not_installed_cluster/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/r_packages_not_installed_cluster/</guid>
+      <description>When deploying R codes across the cluster, many a times the reason for the failure of the task is unavailability of a particular package across all nodes of the cluster. We wait for someone to get the package installed across all the nodes. This may take some days. Do we wait for them? Naah! Presenting a temporary solution that one of my colleague came up with. I have used this technique and this works smoothly.</description>
+    </item>
+    
+  </channel>
+</rss>

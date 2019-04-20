@@ -82,53 +82,65 @@
   </url>
   
   <url>
+    <loc>https://mlsense.github.io/posts/random_forest_explained_intuitively/</loc>
+    <lastmod>2016-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/improve_runtime_random_forest_r/</loc>
+    <lastmod>2016-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/install_a_package_particular_version_in_r/</loc>
+    <lastmod>2016-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/shell_commands_for_data_scientist/</loc>
+    <lastmod>2016-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/roc_and_auc_three_letter_acronym/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/hadoop_streaming/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/big-data/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/hadoop/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/r/</loc>
+    <lastmod>2016-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/r_packages_not_installed_cluster/</loc>
+    <lastmod>2016-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mlsense.github.io/posts/big_data_problem/</loc>
     <lastmod>2016-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/tags/big-data/</loc>
-    <lastmod>2016-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-08-02-r_packages_unavailable_cluster/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-08-29-hadoop_streaming/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-09-26-roc-and-auc/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-09-30-shell-commands/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-10-05-install-package-of-version/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-10-12-random-forest-runtime-fast/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2016-10-18-random-forest-explained/</loc>
     <priority>0</priority>
   </url>
   

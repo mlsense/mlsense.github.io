@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ROC and AUC - The three lettered acronyms - MlSense</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="This post talks about roc curve and confusion matrix.">
+	<meta property="og:title" content="ROC and AUC - The three lettered acronyms" />
+<meta property="og:description" content="This post talks about roc curve and confusion matrix." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mlsense.github.io/posts/roc_and_auc_three_letter_acronym/" />
+<meta property="article:published_time" content="2016-09-26T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-09-26T00:00:00&#43;00:00"/>
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ROC and AUC - The three lettered acronyms"/>
+<meta name="twitter:description" content="This post talks about roc curve and confusion matrix."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="MlSense" rel="home">
+				<div class="logo__title">MlSense</div>
+				<div class="logo__tagline">Making sense of Machine learning</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">Blog</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">About</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">ROC and AUC - The three lettered acronyms</h1>
+
+			
+
+
+<style>
+#share-buttons {
+  position: fixed;
+  top: calc((100% - 180px)/2);
+  left: 0px;
+}
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook {background-color: #3B5998;}
+#share-buttons > div.twitter {background-color: #55ACEE;}
+#share-buttons > div.linkedin {background-color: #0077b5;}
+#share-buttons > div.pinterest {background-color: #CB2027;}
+#share-buttons > div.gplus {background-color: #dd4b39;}
+#share-buttons > div.mail {background-color: #7D7D7D;}
+#share-buttons > div.instagram {background-color: #C73B92;}
+
+#share-buttons > div > svg {
+  height: 32px;
+  width: 32px;
+  margin: 4px;
+  fill: #fff;
+}
+
+#share-buttons > div.mail > svg {
+  height: 30px;
+  width: 30px;
+}
+</style>
+
+
+<span style="color: silver;"></span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="gplus" title="Share this on Google Plus" onclick="window.open('https://plus.google.com/share?url=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 2304 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+
+
+
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-09-26T00:00:00">September 26, 2016</time>
+</div>
+</div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#confession-time">Confession time</a></li>
+<li><a href="#the-typical-case-of-loan-defualters">The typical case of loan defualters</a></li>
+<li><a href="#why-we-need-tpr-fpr-if-we-already-have-mis-classification-error">Why we need TPR, FPR if we already have mis-classification error?</a></li>
+<li><a href="#how-does-the-tpr-and-fpr-gets-calculated">How does the TPR and FPR gets calculated?</a></li>
+<li><a href="#what-about-auc">What about AUC?</a></li>
+<li><a href="#how-do-you-decide-what-probability-cut-off-should-you-choose-to-classify-them-into-either-of-the-classes">How do you decide what probability cut-off should you choose to classify them into either of the classes?</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			
+
+<h3 id="confession-time">Confession time</h3>
+
+<p>I don&rsquo;t feel bad to confess this that <em>ROC curve</em>, <em>AUC</em>, <em>True-positive</em> and related terms took quite some time for me to understand. If today I contemplate on the reasons why I found this topic confusing. The first would be there are not many resources that explains intuitively what these mean. They just jump to the terms and the mathematical formula for them. The second being I had not used them even in my project work. You see the project work is never enough for all your learnings.
+<br>
+<br>
+In this post, I will try to explain my understanding both intuitively and mathematically.</p>
+
+<p>I will illustrate this concept with the help of an example.
+<br>
+<br></p>
+
+<h3 id="the-typical-case-of-loan-defualters">The typical case of loan defualters</h3>
+
+<p>There is a bank say <em>SBI</em> that wants to understand which of its future customers would default on a loan granted by the bank. The bank would already have historical data from the past years that says how many of the customers have defaulted, what type of customer were they and many other information about the past loans.
+<br>
+<br>
+It is very rare that customers default. To give an example, say the bank has data having 1000 rows that contains information like <em>age</em>, <em>gender</em>, <em>income</em>, <em>marital-status</em>, other related columns and then a variable named <em>default</em> that says whether the customer has defaulted or not.</p>
+
+<p>As I mentioned earlier, very few customers default on their loans. So a realistic example would be say 100 customers defaulting out of a total of 1000 customers.
+<br>
+<br>
+The bank is interested in knowing if a customer would default or not. This is a typical binary classification problem. The bank would really be interested in the customers who are likely to default. Let us now try to understand terms like <em>True-positive</em>, <em>True-negative</em>, <em>False-positive</em> and other related terms.
+<br>
+<br>
+There are two levels in the <em>default</em> variable that we are trying to predict-<strong>default</strong> and <strong>not-default</strong>. One has to define first whether <strong>default</strong> will be treated as positive or <strong>not-default</strong> as positive. It is just a convention. Normally, the class of interest is treated as positive. So in the bank&rsquo;s case, what do you think we should take as positive? You might have guessed it correctly, we will treat <strong>default</strong> as positive and <strong>not-default</strong> as negative.
+<br>
+<br>
+We train a binary classification model on this dataset having 1000 rows. The predictions that the model makes for the training data will either be correct or incorrect.</p>
+
+<p><strong>There will be two cases for incorrect predictions</strong></p>
+
+<ul>
+<li>Predicting positive when the actual was negative i.e classifying a customer as default when in actual he is not-default</li>
+<li>Predicting negative when the actual was positive i.e classifying a customer as not-default when in actual he is default</li>
+</ul>
+
+<p><strong>There will be two cases for correct predictions</strong></p>
+
+<ul>
+<li>Predicting positive when the actual was positive i.e correctly classifying default as default</li>
+
+<li><p>Predicting negative when the actual was negative i.e correctly classifying not-default as not-default
+<br>
+<br>
+Now, FP, FN are incorrect predictions (notice False in the name) as the name suggests and TP, TN are the correct predictions. Don&rsquo;t be in a hurry here. Take some time to digest these 2 lettered acronyms. Read them loud. Take a notebook and write them down on your own.
+<br>
+<br>
+Once we are comfortable with these terms we will discuss about something called confusion-matrix. Don&rsquo;t get confused yet. If you understood TP, TN, FP, FN then confusion-matrix is just a matrix having these values. The diagonal elements contain the count of correct predictions (TP, TN) whereas the off-diagonal contain the count of incorrect predictions (FP, FN). The rows are the predicted and the columns are the actual.
+This looks something like this.
+<Insert a picture>
+<br>
+<br></p>
+
+<h3 id="why-we-need-tpr-fpr-if-we-already-have-mis-classification-error">Why we need TPR, FPR if we already have mis-classification error?</h3>
+
+<p>The data I describe above is a typical case of imbalanced data wherein one of the class is having majority of observations (90% non-defaulters (negatives) in our data) and the remaining class is a minority (only 10% defaulters (positives)). In such cases, the predictions on new dataset will be skewed towards negatives i.e the model will classify a lot of defaulters (positives) into negatives. The bank can&rsquo;t afford to have such predictions. The bank wants to know for sure the defaulters (positives). Imagine, the loss to bank if the model classify a probable defaulter (positive) to non-defaulter.
+<br>
+<br>
+In such cases, accuracy corresponding to mis-classification alone is not acceptable. The bank would be more interested in correctly classifying the positives into positive i.e the bank wants to classify the defaulters into defaulters without fail.
+<br>
+<br>
+Comes into picture <em>TPR</em>, <em>TNR</em>, <em>FPR</em>, <em>FNR</em>. These 3 lettered acronyms are nothing but the rates of TP, TN, FP and FN respectively.
+Below is the formula. To digest the formula, let&rsquo;s move to our data having 1000 rows - 100 defaulters (positives) and 900 non-defaulters(negatives). Suppose we employed a logistic regression that classified 80 defaulters correctly and incorrectly classified 90 non-defaulters as defaulters.
+TPR = 80 / 100 = 0.8
+FPR = 90/ 900 = 0.1
+<br>
+<br></p>
+
+<h3 id="how-does-the-tpr-and-fpr-gets-calculated">How does the TPR and FPR gets calculated?</h3>
+
+<p>Whenever you do any classification, the model always gives you probabilities of each observation getting classified in each of the classes.
+Based on what cut-off you choose, you will get different predictions for the data and hence different TPR and FPR overall. You can choose whatever probability cut-off between [0, 1] and you will get different tuples of TPR and FPR.
+<br>
+<br></p></li>
+</ul>
+
+<blockquote>
+<p>TPR and FPR are be generated for each of the probability value one chooses. And these values are then plotted on an ROC curve.</p>
+</blockquote>
+
+<p><br>
+One can plot these tuples (probability, FPR, TPR) on a graph. You know what this graph is called? ROC-Receiver Operating Characteristics.
+There is a trade-off between TPR and FPR. Depending on the requirement one can choose the probability cut-off that best fulfills their purpose. For instance, in the bank&rsquo;s case, the bank wants to not miss a single defaulter(positives) i.e the bank wants a higher TPR. The ROC curve looks something like this.</p>
+
+<p>Alright, all this is clear to me.
+<br>
+<br></p>
+
+<h3 id="what-about-auc">What about AUC?</h3>
+
+<p>AUC is nothing but the area under curve of ROC curve. Let&rsquo;s say we built a logistic regression model that gave us the probabilities for each row. Now we try with probability cut-offs from 0.1 to 1.0 with step size of 0.1 i.e we would have 10 probabilites to try with and corresponding to each of the 10 values we would have corresponding (FPR, TPR). If we plot these values on a graph we would get a graph having 10 points. This 10 point graph is what we call an ROC curve and the area under this graph is called AUC.
+<br>
+<br>
+The AUC is a common evaluation metric for binary classification problems. Consider a plot of the true positive rate vs the false positive rate as the threshold value for classifying an item as 0 or is increased from 0 to 1: if the classifier is very good, the true positive rate will increase quickly and the area under the curve will be close to 1. If the classifier is no better than random guessing, the true positive rate will increase linearly with the false positive rate and the area under the curve will be around 0.5.
+<br>
+<br>
+One characteristic of the AUC is that it is independent of the fraction of the test population which is class 0 or class 1: this makes the AUC useful for evaluating the performance of classifiers on unbalanced data sets.
+<br>
+<br>
+The larger the area the better. If we have to choose between two classifiers having different AUCs, we choose the one having larger AUC.
+<br>
+<br></p>
+
+<h3 id="how-do-you-decide-what-probability-cut-off-should-you-choose-to-classify-them-into-either-of-the-classes">How do you decide what probability cut-off should you choose to classify them into either of the classes?</h3>
+
+<p>Some say they take a cut-off of 0.5 i.e observation having probability greater than 0.5 will be classified as positive or else negative. Do you see the problem in here? Try thinking.
+<br>
+<br>
+Come into picture ROC curve. Look at the ROC curve and depending on what value of TPR or FPR you want from your model, you take probability corresponding to that point.</p>
+
+<p>ROC, AUC can easily be plotted and calculated using modern analytical tools like R or Python. But I would suggest for better understanding of this topic, try writing your own code.
+<br>
+<br>
+I will make an attempt of the same soon and will share it on this space. Keep learning and sharing.</p>
+
+<p>Did you find the article useful? If you did, share your thoughts on the topic in the comments.</p>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/ml/" rel="tag">ML</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a></li>
+	</ul>
+</div>
+		
+
+
+<style>
+#share-buttons-footer {display: inline-block; vertical-align: middle; }
+#share-buttons-footer:after {content: ""; display: block; clear: both;}
+#share-buttons-footer > div {
+position: relative;
+text-align: left;
+height: 36px;
+width: 32px;
+float: left;
+text-align: center;
+left: 150 px;
+}
+#share-buttons-footer > div > svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
+
+#share-buttons-footer > div:hover {cursor: pointer;}
+#share-buttons-footer > div.facebook > svg {fill: #3B5998;}
+#share-buttons-footer > div.twitter > svg {fill: #55ACEE;}
+#share-buttons-footer > div.linkedin > svg {fill: #0077b5;}
+#share-buttons-footer > div.pinterest > svg {fill: #CB2027;}
+#share-buttons-footer > div.gplus > svg {fill: #dd4b39;}
+#share-buttons-footer > div.mail > svg {fill: #7D7D7D;}
+#share-buttons-footer > div.instagram > svg {fill: #C73B92;}
+
+#share-buttons-footer > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons-footer > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons-footer > div.linkedin > svg {height: 19px; margin-top: 7px;}
+#share-buttons-footer > div.pinterest > svg {height: 20px; margin-top: 9px;}
+#share-buttons-footer > div.gplus > svg {height: 17px; margin-top: 9px; position: relative; left: 1px;}
+#share-buttons-footer > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: silver;">Share on: </span><div id="share-buttons-footer">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="gplus" title="Share this on Google Plus" onclick="window.open('https://plus.google.com/share?url=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 2304 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/mlsense.github.io\/\/posts\/roc_and_auc_three_letter_acronym\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+
+
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/hadoop_streaming/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Hadoop Streaming</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/posts/shell_commands_for_data_scientist/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Shell commands come in handy for a data scientist</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mlsense-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://mlsense.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/vim_shortcuts/">Vim/Vi editor shortcuts</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/my-first-hugo-post/">My First Hugo Post</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/time-series-post/">Time series and forecasting using R</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/types_of_data_recommender_system/">Types of data in recommender systems</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/random_forest_explained_intuitively/">Random Forest explained intuitively</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/category-1">Category 1</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/category-2">Category 2</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/ManishFirewall" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/manish-barnwal-9b364a17" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/username" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 MlSense.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
