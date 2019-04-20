@@ -60,6 +60,24 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
     </item>
     
     <item>
+      <title>The curse of bias and variance</title>
+      <link>https://mlsense.github.io/posts/the_curse_of_bias_and_variance/</link>
+      <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/the_curse_of_bias_and_variance/</guid>
+      <description>Statistics is the field of study where we try to draw conclusions about the population from a sample. Why do we talk about sample? Why can&amp;rsquo;t we get the conclusions about the population directly from the population? Let me illustrate this by an example. Let us say we want to understand which brand of beer do the people of Bangalore prefers? An interesting question. If I ask you this question, how would you approach this problem?</description>
+    </item>
+    
+    <item>
+      <title>Visualisation in machine learning is under-rated</title>
+      <link>https://mlsense.github.io/posts/visualisation_is_under-rated/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/visualisation_is_under-rated/</guid>
+      <description>Visualisation is one of the most important pillars of data science. Every one wants to learn Machine learning but if you explain them the little tasks that involve the overall workflow of the process, it turns them off. Everyone just wants to do the cool stuff. They want to build models and be done with it. And I was one of them. I understand that feeling when you get the data and without much understanding of the features in the dataset, we just want to throw in the data to a model and hope that something good comes out.</description>
+    </item>
+    
+    <item>
       <title>Random Forest explained intuitively</title>
       <link>https://mlsense.github.io/posts/random_forest_explained_intuitively/</link>
       <pubDate>Tue, 18 Oct 2016 00:00:00 +0000</pubDate>
@@ -142,26 +160,6 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
       <guid>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</guid>
       <description>Title: Understanding HIVE for data science people date: 2016-06-22 04:43 comments: true slug: understanding_hive_data_science Category: Big Data Tags: hive, hadoop, big data, manish barnwal description: This post is meant for data science folks who want to use and understand HIVE Keywords: Hive, hadoop, big data, , manish barnwal
 I have been working as Statistical analyst for the last 1.5 years and fortunately I got to work on Hadoop on one of my initial projects.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-01-27-visualization-uder-rated/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-01-27-visualization-uder-rated/</guid>
-      <description>Title: Visualization in ML is under-rated date: 2017-01-27 8:00 comments: true slug: visualization_is_under-rated Category: ML, Data Science Tags: visualization, machine-learning, manish barnwal description: This post talks about visualization -one of the most important aspects of data science that often gets ignored. Keywords: visualization, R, data science, ML, manish barnwal
-Visualization is one of the most important pillars of data science. Every one wants to learn Machine learning but if you explain them the little tasks that involve the overall workflow of the process, it turns them off.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-02-08-the_curse_of_bias_variance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-02-08-the_curse_of_bias_variance/</guid>
-      <description>Title: The curse of bias and variance [draft] date: 2017-02-08 8:00 comments: true slug: the_curse_of_bias_and_variance Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about the trade-off between bias and variance. Keywords: ML, data science, overfitting, bias, variance, manish barnwal
-Statistics is the field of study where we try to draw conclusions about the population from a sample. Why do we talk about sample? Why can&amp;rsquo;t we get the conclusions about the population directly from the population?</description>
     </item>
     
     <item>

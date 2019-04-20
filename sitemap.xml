@@ -82,6 +82,16 @@
   </url>
   
   <url>
+    <loc>https://mlsense.github.io/posts/the_curse_of_bias_and_variance/</loc>
+    <lastmod>2017-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/visualisation_is_under-rated/</loc>
+    <lastmod>2017-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mlsense.github.io/posts/random_forest_explained_intuitively/</loc>
     <lastmod>2016-10-18T00:00:00+00:00</lastmod>
   </url>
@@ -141,16 +151,6 @@
   
   <url>
     <loc>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2017-01-27-visualization-uder-rated/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2017-02-08-the_curse_of_bias_variance/</loc>
     <priority>0</priority>
   </url>
   
