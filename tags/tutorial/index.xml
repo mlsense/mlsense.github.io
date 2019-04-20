@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on MlSense</title>
+    <link>https://mlsense.github.io/tags/tutorial/</link>
+    <description>Recent content in tutorial on MlSense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mlsense.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim/Vi editor shortcuts</title>
+      <link>https://mlsense.github.io/posts/vim_shortcuts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/vim_shortcuts/</guid>
+      <description>Repetitive tasks should be done using as many shortcuts as possible. You are not doing anything new and hence not even an extra minute should be spent on doing the same. This post refers to the shortcuts that come in handy when working on the vi/vim editor.
+This is not an exhaustive list. These are the ones I use frequently. Feel free to comment down your favorite shortcuts. Navigation keys  0 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves cursor to the start of the line $ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves cursor to the end of the line w &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves forward one word b &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves backward one word</description>
+    </item>
+    
+  </channel>
+</rss>

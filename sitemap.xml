@@ -70,4 +70,133 @@
     <lastmod>2018-09-27T00:00:00+00:00</lastmod>
   </url>
   
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-06-29-big-data-problem/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-08-02-r_packages_unavailable_cluster/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-08-29-hadoop_streaming/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-09-26-roc-and-auc/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-09-30-shell-commands/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-10-05-install-package-of-version/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-10-12-random-forest-runtime-fast/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2016-10-18-random-forest-explained/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-01-27-visualization-uder-rated/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-02-08-the_curse_of_bias_variance/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-02-15-adversarial-validation/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-02-15-git-and-github/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-02-16-adversarial-validation-code/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-03-28-diving-into-h2o/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-05-12-ml-function-estimation/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-05-15-dplyr-tutorial/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-05-18-choosing-probability-cut-off-in-classification/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2017-11-23-docker-commands/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2018-01-23-creating-virtual-env/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2018-04-18-git-and-github-for-data-scientists/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2018-06-18-dates-in-python/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/2018-09-27-types-data-recommender-system/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/vim_shortcuts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/tutorial/</loc>
+    <priority>0</priority>
+  </url>
+  
 </urlset>

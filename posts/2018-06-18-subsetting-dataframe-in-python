@@ -1,0 +1,21 @@
+Title: Subsetting a dataframe in Python
+date:  2018-06-18 8:00
+comments: true
+slug: subsetting_dataframe_python
+Category: ML, Data Science
+Tags: python, tutorial, hacks, manish barnwal
+description: This tutorial is on how to filter rows of a dataframe based on conditions on columns in dataframe in Python.
+Keywords: date, datetime, python, tutorial, manish barnwal
+
+
+df.loc[:, ['col1', 'col2']]
+
+df.loc[df.browser == 'Chrome', :]
+df.browser.sample(10)
+
+df.loc[df.browser.isin(['Chrome', 'IE']), :]
+
+
+Dropping columns
+
+df.drop(labels=['col1', 'col2'], axis=1, inplace=True)

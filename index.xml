@@ -49,5 +49,257 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
       <description>There are two ways in which we can collect data for building recommender systems — explicit and implicit. In this post, we will talk about both types of data, their characteristics and the challenges with them. Explicit feedback datasets The dictionary meaning of explicit is to state clearly and in detail. Explicit feedback data as the name suggests is an exact number given by a user to a product. Some of the examples of explicit feedback are ratings of movies by users on Netflix, ratings of products by users on Amazon.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</guid>
+      <description>Title: Understanding HIVE for data science people date: 2016-06-22 04:43 comments: true slug: understanding_hive_data_science Category: Big Data Tags: hive, hadoop, big data, manish barnwal description: This post is meant for data science folks who want to use and understand HIVE Keywords: Hive, hadoop, big data, , manish barnwal
+I have been working as Statistical analyst for the last 1.5 years and fortunately I got to work on Hadoop on one of my initial projects.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-06-29-big-data-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-06-29-big-data-problem/</guid>
+      <description>Title: The Big Data Problem date: 2016-06-29 7:00 comments: true slug: big_data_problem Category: Big Data Tags: big data, hadoop, machine-learning, manish barnwal description: This post talks about the big data problem and why we need it Keywords: big data, analytics, hadoop, spark, manish barnwal
+Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-08-02-r_packages_unavailable_cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-08-02-r_packages_unavailable_cluster/</guid>
+      <description>Title: When R package is not available across the cluster date: 2016-08-02 7:00 comments: true slug: r_packages_not_in_cluster Category: ML, Data Science Tags: R, hacks, manish barnwal description: This post talks about a hack which is useful if a particular R package is unavailable across the cluster Keywords: big data, R, manish barnwal
+When deploying R codes across the cluster, many a times the reason for the failure of the task is unavailability of a particular package across all nodes of the cluster.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-08-29-hadoop_streaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-08-29-hadoop_streaming/</guid>
+      <description>Title: Hadoop Streaming date: 2016-08-29 7:00 comments: true slug: hadoop_streaming Category: Big Data Tags: big data, hive, tutorial, hadoop, manish barnwal description: This post talks about the hadoop streaming framework Keywords: big data, analytics, hadoop, manish barnwal
+A few days ago, I had written a post on The Big Data Problem{:target=&amp;rdquo;_blank&amp;rdquo;} which attempted to understand why we need big data and what the fuss is all about. You may want to read it here{:target=&amp;rdquo;_blank&amp;rdquo;}.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-09-26-roc-and-auc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-09-26-roc-and-auc/</guid>
+      <description>Title: ROC and AUC - The three lettered acronyms date: 2016-09-26 8:00 comments: true slug: three_letter_acronym_roc_and_auc Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about roc curve and confusion matrix. Keywords: roc, auc, tpr, fpr, probability cut-off, manish barnwal
+I don&amp;rsquo;t feel bad to confess this that ROC curve, AUC, True-positive and related terms took quite some time for me to understand. If today I contemplate on the reasons why I found this topic confusing.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-09-30-shell-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-09-30-shell-commands/</guid>
+      <description>Title: Shell commands come in handy for a data scientist date: 2016-09-30 7:00 comments: true slug: shell_commands_for_data_scientist Category: ML, Data Science Tags: tutorial, hacks, machine-learning, manish barnwal description: This post talks about shell commands that come in handy for data-science people Keywords: shell-commands, manish barnwal
+I am no expert of shell commands. I have been using them for quite some time and thought I give an attempt to list down the most common commands.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-10-05-install-package-of-version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-10-05-install-package-of-version/</guid>
+      <description>Title: How to install a package of a particular version in R date: 2016-10-05 7:00 comments: true slug: install_a_package_particular_version_in_R Category: ML, Data Science Tags: R, hacks, manish barnwal description: This post explains how to install a package of a particular version in R Keywords: R, package, package version, manish barnwal
+I recently tried installing caret package in R using install.packages(&amp;lsquo;caret&amp;rsquo;, dependencies=T) 
+Normally this installation of package works and I continue to work with the functions associated with the package.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-10-12-random-forest-runtime-fast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-10-12-random-forest-runtime-fast/</guid>
+      <description>Title: Improve runtime of Random Forest in R date: 2016-10-13 10:00 comments: true slug: improve_runtime_random_forest_r Category: ML, Data Science Tags: machine-learning, hacks, manish barnwal description: This post talks about a trick to improve the runtime of random forest package in R for large datasets Keywords: random forest, hack, manish barnwal
+There are two ways one can write the code to train a random forest model in R. Both the ways are listed below.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2016-10-18-random-forest-explained/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2016-10-18-random-forest-explained/</guid>
+      <description>Title: Random Forest explained intuitively date: 2016-10-18 8:00 comments: true slug: random_forest_explained_intuitively Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post explains random forest intuitively Keywords: random forest, random forest tutorial, data-science, manish barnwal
+Random Forests algorithm has always fascinated me. I like how this algorithm can be easily explained to anyone without much hassle. One quick example, I use very frequently to explain the working of random forests is the way a company has multiple rounds of interview to hire a candidate.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-01-27-visualization-uder-rated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-01-27-visualization-uder-rated/</guid>
+      <description>Title: Visualization in ML is under-rated date: 2017-01-27 8:00 comments: true slug: visualization_is_under-rated Category: ML, Data Science Tags: visualization, machine-learning, manish barnwal description: This post talks about visualization -one of the most important aspects of data science that often gets ignored. Keywords: visualization, R, data science, ML, manish barnwal
+Visualization is one of the most important pillars of data science. Every one wants to learn Machine learning but if you explain them the little tasks that involve the overall workflow of the process, it turns them off.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-02-08-the_curse_of_bias_variance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-02-08-the_curse_of_bias_variance/</guid>
+      <description>Title: The curse of bias and variance [draft] date: 2017-02-08 8:00 comments: true slug: the_curse_of_bias_and_variance Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about the trade-off between bias and variance. Keywords: ML, data science, overfitting, bias, variance, manish barnwal
+Statistics is the field of study where we try to draw conclusions about the population from a sample. Why do we talk about sample? Why can&amp;rsquo;t we get the conclusions about the population directly from the population?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-02-15-adversarial-validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-02-15-adversarial-validation/</guid>
+      <description>Title: An illustrated introduction to adversarial validation part 1 date: 2017-02-15 8:00 comments: true slug: introduction_to_adversarial_validation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about adversarial validation- an approach to the problem of differently distributed training and test data. Keywords: ML, data science, cross-validation, adversarial-validation, manish barnwal
+You&amp;rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-02-15-git-and-github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-02-15-git-and-github/</guid>
+      <description>Title: How to use Git and Github date: 2017-02-15 10:00 comments: true slug: git_and_github Category: ML, Data Science Tags: tutorial, manish barnwal description: This post talks about the usage of git and github Keywords: git, github, manish barnwal
+I had taken this course - How to use git and github some time last year. This post is an amalgamation of the course notes and other tutorials I have completed in understanding git.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-02-16-adversarial-validation-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-02-16-adversarial-validation-code/</guid>
+      <description>Title: An illustrated introduction to adversarial validation part 2 date: 2017-02-16 8:00 comments: true slug: introduction_to_adversarial_validation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about adversarial validation- an approach to the problem of differently distributed training and test data. Keywords: ML, data science, cross-validation, adversarial-validation, manish barnwal
+In the last post we talked about the idea of adversarial validation{:target=&amp;rdquo;_blank&amp;rdquo;} and how it helps the problem when your validation set result doesn&amp;rsquo;t comply with that of test set result.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-03-28-diving-into-h2o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-03-28-diving-into-h2o/</guid>
+      <description>Title: Diving into H2O with R date: 2017-03-28 7:00 comments: true slug: h2o_with_r Category: ML, Data Science Tags: tutorial, machine-learning, big data, R, manish barnwal description: This post talks about building machine learning models in H2O using R. Keywords: h2o tutorial, parallel processing, big data, R, manish barnwal
+Do you understand the pain when you have to train advanced machine learning algorithms like Random Forest on huge datasets? When there is a factor column that has way too many number of levels?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</guid>
+      <description>Title: Time series and forecasting using R date: 2017-05-03 8:00 comments: true slug: time_series_and_forecasting_using_R Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about time series and forecasting. Keywords: ML, data science, time series, forecasting, time series tutorial, manish barnwal
+Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-05-12-ml-function-estimation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-05-12-ml-function-estimation/</guid>
+      <description>Title: The essence of machine learning is function estimation date: 2017-05-12 8:00 comments: true slug: machine_learning_function_estimation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks explains how the essence of machine learning is function estimation. Keywords: ML, data science, machine learning explained, manish barnwal
+Machine learning is cool. There is no denying in that. In this post we will try to make it a little uncool, well it will still be cool but you may start looking at it differently.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-05-15-dplyr-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-05-15-dplyr-tutorial/</guid>
+      <description>Title: Tutorial on dplyr- a package for data manipulation in R date: 2017-05-15 8:00 comments: true slug: tutorial_on_dplyr Category: ML, Data Science Tags: tutorial, R, machine-learning, manish barnwal description: This post is a tutorial on dplyr - a package for data manipulation in R. Keywords: dplyr, dplyr tutorial, dplyr package, R, data manipulation, manish barnwal
+R is the most used tool in data science. It has no dearth of packages for specific use cases.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-05-18-choosing-probability-cut-off-in-classification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-05-18-choosing-probability-cut-off-in-classification/</guid>
+      <description>Title: How to choose the probability cut-off in classification problem date: 2017-05-18 8:00 comments: true slug: choosing_probability_cut-off_in_classification Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post describes how to choose the probability cut-off in classification problem. Keywords: ML, data science, R, classification, probability, cut-off, machine learning, manish barnwal
+Yesterday, I was taking a session on Data Science for few of my colleagues. The aim was to give a brief overview of machine learning.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2017-11-23-docker-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-11-23-docker-commands/</guid>
+      <description>Title: Common docker commands date: 2017-11-23 8:00 comments: true slug: common_docker_commands Category: ML, Data Science Tags: machine-learning, tutorial, hacks, manish barnwal description: This post is a tutorial on the commonly used docker commands. Keywords: docker, docker-commands, docker tutorial, manish barnwal
+I recently got to know about dockers. And I love it. For those who don&amp;rsquo;t know what dockers are. Here it is. Dockers help in software development in isolated frameworks.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2018-01-23-creating-virtual-env/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2018-01-23-creating-virtual-env/</guid>
+      <description>Title: Creating a virtual environment in Python date: 2018-01-23 8:00 comments: true slug: virtual_environment_in_python Category: ML, Data Science Tags: python, tutorial, hacks, manish barnwal description: This is a tutorial on how to create a virtual environment in Python. Keywords: virtual environment, python, tutorial, manish barnwal
+I was trying to get a virtual environment set up on Python 3 using mkvirtualenv but somehow the virtual environment was getting created on Python 2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2018-04-18-git-and-github-for-data-scientists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2018-04-18-git-and-github-for-data-scientists/</guid>
+      <description>Title: git and github for data scientists date: 2018-04-18 8:00 comments: true slug: git_and_github_for_data_scientists Category: ML, Data Science Tags: python, tutorial, hacks, manish barnwal description: This is a tutorial on git and github for anyone who wants to use it. Keywords: git, github, tutorial, manish barnwal
+It has been close to a year since I shifted to a start-up which incidentally got acquired after a month of my joining. Before this I used to work at WalmartLabs where we always wanted to use a version control system like git but it never took off properly.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2018-06-18-dates-in-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2018-06-18-dates-in-python/</guid>
+      <description>Title: Working with dates in Python date: 2018-06-18 8:00 comments: true slug: working_with_dates_in_python Category: ML, Data Science Tags: python, tutorial, hacks, manish barnwal description: This tutorial is on ways to deal with dates in Python. Keywords: date, datetime, python, tutorial, manish barnwal
+I cringe every time I see a date type column in the data. And you may ask why so? Date columns need some methods applied to them
+The reason is I don&amp;rsquo;t normally see date columns in the data I work with so I don&amp;rsquo;t remember the functions and methods that work on dates to get meaningful columns out of the date column in the data.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mlsense.github.io/posts/2018-09-27-types-data-recommender-system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2018-09-27-types-data-recommender-system/</guid>
+      <description>Title: Types of data in recommender systems date: 2018-09-27 8:00 comments: true slug: types_data_recommender_system Category: ML, Data Science Tags: recommendation, recommender, tutorial, manish barnwal description: This tutorial explains the type of data one deals with when building recommender systems. Keywords: recommendation, recommender, tutorial, manish barnwal
+There are two ways in which we can collect data for building recommender systems — explicit and implicit. In this post, we will talk about both types of data, their characteristics and the challenges with them.</description>
+    </item>
+    
+    <item>
+      <title>Vim/Vi editor shortcuts</title>
+      <link>https://mlsense.github.io/posts/vim_shortcuts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/vim_shortcuts/</guid>
+      <description>Repetitive tasks should be done using as many shortcuts as possible. You are not doing anything new and hence not even an extra minute should be spent on doing the same. This post refers to the shortcuts that come in handy when working on the vi/vim editor.
+This is not an exhaustive list. These are the ones I use frequently. Feel free to comment down your favorite shortcuts. Navigation keys  0 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves cursor to the start of the line $ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves cursor to the end of the line w &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves forward one word b &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves backward one word</description>
+    </item>
+    
   </channel>
 </rss>
