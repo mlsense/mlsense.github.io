@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MlSense</title>
+    <link>https://mlsense.github.io/</link>
+    <description>Recent content on MlSense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mlsense.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time series and forecasting using R</title>
+      <link>https://mlsense.github.io/posts/time-series-post/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/time-series-post/</guid>
+      <description>Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert. But forecasting is something that is a little domain specific. Retailers like Walmart, Target use forecasting systems and tools to replenish their products in the stores. An excellent forecast system helps in winning the other pipelines of the supply chain.</description>
+    </item>
+    
+    <item>
+      <title>Types of data in recommender systems</title>
+      <link>https://mlsense.github.io/posts/types_of_data_recommender_system/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/types_of_data_recommender_system/</guid>
+      <description>There are two ways in which we can collect data for building recommender systems — explicit and implicit. In this post, we will talk about both types of data, their characteristics and the challenges with them. Explicit feedback datasets The dictionary meaning of explicit is to state clearly and in detail. Explicit feedback data as the name suggests is an exact number given by a user to a product. Some of the examples of explicit feedback are ratings of movies by users on Netflix, ratings of products by users on Amazon.</description>
+    </item>
+    
+  </channel>
+</rss>

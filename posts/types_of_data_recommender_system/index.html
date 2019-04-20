@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Types of data in recommender systems - MlSense</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="This tutorial explains the type of data one deals with when building recommender systems.">
+	<meta property="og:title" content="Types of data in recommender systems" />
+<meta property="og:description" content="This tutorial explains the type of data one deals with when building recommender systems." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mlsense.github.io/posts/types_of_data_recommender_system/" />
+<meta property="article:published_time" content="2018-09-27T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-09-27T00:00:00&#43;00:00"/>
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Types of data in recommender systems"/>
+<meta name="twitter:description" content="This tutorial explains the type of data one deals with when building recommender systems."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="MlSense" rel="home">
+				<div class="logo__title">MlSense</div>
+				<div class="logo__tagline">Making sense of Machine learning</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">Blog</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Types of data in recommender systems</h1>
+			<p class="post__lead">Explicit and Implicit feedback data</p>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-09-27T00:00:00">September 27, 2018</time>
+</div>
+</div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#explicit-feedback-datasets">Explicit feedback datasets</a></li>
+<li><a href="#issues-with-explicit-feedback-data">Issues with explicit feedback data</a></li>
+<li><a href="#implicit-feedback-datasets">Implicit feedback datasets</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			
+
+<p>There are two ways in which we can collect data for building recommender systems — <strong>explicit</strong> and <strong>implicit</strong>. In this post, we will talk about both types of data, their characteristics and the challenges with them.
+<br>
+<br></p>
+
+<h3 id="explicit-feedback-datasets">Explicit feedback datasets</h3>
+
+<p>The dictionary meaning of explicit is to state clearly and in detail. Explicit feedback data as the name suggests is an exact number given by a user to a product. Some of the examples of explicit feedback are ratings of movies by users on Netflix, ratings of products by users on Amazon. Explicit feedback takes into consideration the input from the user about how they liked or disliked a product. Explicit feedback data are quantifiable.
+<br>
+<br>
+But there are a few problems with explicit data. We will talk about them and then move to discuss the more abundant and easily available implicit feedback data.
+<br>
+<br>
+<img src="http://manishbarnwal.com/images/types_data_recs_system/explicit_feedback.png" alt="photo of explicit feedback data" />
+<br>
+<br></p>
+
+<h3 id="issues-with-explicit-feedback-data">Issues with explicit feedback data</h3>
+
+<p>When was the last time you rated a movie on Netflix? People normally rate a movie or an item on extreme feelings — either they really like the product or when they just hated it. The latter being more prominent. So, chances are your dataset will be largely filled with a lot of positive ratings but very less negative ratings.
+<br>
+<br>
+Explicit feedback is hard to collect as they require additional input from the users. They need a separate system to capture this type of data. Then you’ve to decide whether you should go with ratings or like/dislike option to collect the feedback. Each having their merits/demerits.
+<br>
+<br>
+Explicit feedback doesn’t take into consideration the context of when you were watching the movie. Let us understand with an example. You watched a documentary and you really liked it and you rated it well. Now, this doesn’t mean you would like to see a lot many documentaries but with explicit ratings, this becomes difficult to take into consideration. I like to binge watch The Office tv series while having dinner and I would give it a high rating 4.<sup>5</sup>&frasl;<sub>5</sub> but that doesn’t mean that I would watch it at any time of the day.
+<br>
+<br>
+There is another problem with explicit ratings. People rate movies/items differently. Some are lenient with their ratings while others are particular about what ratings they give. You need to take care of bias in ratings from users as well.
+<br>
+<br>
+For me a good movie will be rated <sup>3</sup>&frasl;<sub>5</sub> but may be, for you, a good movie is rated <sup>4</sup>&frasl;<sub>5</sub> so clearly our ways of rating a movie is different and this bias needs to be taken care of.
+<br>
+<br>
+We now understand explicit feedback and some of the issues with it. There is another type of feedback data in recommendation systems — implicit feedback. Let us talk about them.
+<br>
+<br></p>
+
+<h3 id="implicit-feedback-datasets">Implicit feedback datasets</h3>
+
+<p>The dictionary meaning of implicit is suggested though not stated clearly. And that’s exactly what implicit feedback data represents. Implicit feedback doesn’t directly reflect the interest of the user but it acts as a proxy for a user’s interest.
+<br>
+<br>
+Examples of implicit feedback datasets include browsing history, clicks on links, count of the number of times a song is played, the percentage of a webpage you have scrolled — 25%, 50% or 75 % or even the movement of your mouse.
+<br>
+<br>
+<img src="http://manishbarnwal.com/images/types_data_recs_system/implicit_feedback_data.png" alt="photo of implicit feedback data" />
+<br>
+<br>
+If you just browsed an item that doesn’t necessarily mean that you liked that item but if you have browsed this item multiple times that gives us some confidence that you may be interested in that item. Implicit feedback collects information about the user’s actions.
+<br>
+<br>
+Implicit feedback data are found in abundance and are easy to collect. They don’t need any extra input from the user. Once you have the permission of the user to collect their data, your dependence on the user is reduced.
+<br>
+<br>
+Let us talk about some unique characteristics of implicit feedback datasets:</p>
+
+<ol>
+<li><strong>No negative preference measured directly</strong></li>
+</ol>
+
+<p>Unlike explicit feedback where a user gives a poor rating for an item, he/she doesn’t like, we do not have a direct way to measure the interest of a user. Repeated action in favor of the item — for eg. listening to Coldplay’s Fix You gives us confidence that the user likes this song and we could recommend a similar song to the user. However, an absence of listening count for a song doesn’t mean that the user does not like the item — may be the user is not even aware of the existence of the song. So, there is no way to measure negative preference directly.
+<br>
+<br>
+2. <strong>The numerical value of implicit feedback denotes confidence that the user likes the item</strong></p>
+
+<p>For eg., if I’ve listened to Coldplay more number of times than that to Pink Floyd on Youtube, the system would infer with higher confidence about my likeability for Coldplay.
+<br>
+<br>
+3. <strong>A lot of noisy data to take care of</strong></p>
+
+<p>You need to do a lot of filtering before you actually can get worthwhile data to be modeled upon. Just because I bought an item doesn’t mean I liked the item — may be I bought it for a friend or maybe I didn’t like the item at all after purchasing the item. To handle such issues, we can calculate confidence associated with the preference of the users for items. Read this excellent paper to get an idea of how to incorporate confidence in the feedback data — <a href="http://yifanhu.net/PUB/cf.pdf">Collaborative Filtering For Implicit Feedback Datasets</a>.
+<br>
+<br>
+4. <strong>Missing values</strong></p>
+
+<p>Explicit feedback datasets are difficult to capture and hence a lot many values are missing and we go about modeling with whatever remaining ratings we have ignoring the missing values. While in the implicit feedback, we assign the missing values as 0 indicating no action from the user — no purchase or not listened to the song.
+<br>
+<br>
+5. <strong>Evaluation of implicit feedback models require appropriate measures</strong></p>
+
+<p>With explicit feedback — eg. ratings of movies in Netflix data, one can use RMSE (Root mean squared error) as a metric to see how far the predicted ratings are from the observed ratings on a test dataset. With implicit feedback, such a metric is not available. We work with other metrics like decision-support based metrics — precision, recall or rank-based metrics like MRR (mean reciprocal rank), NDCG (normalized discounted cumulative gain), precision@k.
+<br>
+<br>
+I know it may sound counter-intuitive when I say this — <em>implicit feedback datasets are better than explicit feedback in general at getting improved recommendations</em>. I don’t have a case study to prove this but I have listened to many talks of Xavier Amatrian, a great name in recommendation systems domain and I’ve heard him iterate this point many times.
+<br>
+<br>
+So, there we have the types of data we generally deal with while building recommendation systems. Let me know your thoughts!</p>
+
+		</div>
+		
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/posts/time-series-post/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Time series and forecasting using R</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 MlSense.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
