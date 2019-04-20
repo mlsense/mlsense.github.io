@@ -21,5 +21,14 @@
 This is not an exhaustive list. These are the ones I use frequently. Feel free to comment down your favorite shortcuts. Navigation keys  0 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves cursor to the start of the line $ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves cursor to the end of the line w &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves forward one word b &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Moves backward one word</description>
     </item>
     
+    <item>
+      <title>The Big Data Problem</title>
+      <link>https://mlsense.github.io/posts/big_data_problem/</link>
+      <pubDate>Wed, 29 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/big_data_problem/</guid>
+      <description>Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates. American Express was one such company that had talked extensively about big data and hadoop in their presentation. I remember clearly, the blank faces that all of us had.</description>
+    </item>
+    
   </channel>
 </rss>

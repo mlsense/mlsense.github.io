@@ -82,12 +82,18 @@
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</loc>
+    <loc>https://mlsense.github.io/posts/big_data_problem/</loc>
+    <lastmod>2016-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/big-data/</loc>
+    <lastmod>2016-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/posts/2016-06-29-big-data-problem/</loc>
+    <loc>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</loc>
     <priority>0</priority>
   </url>
   
