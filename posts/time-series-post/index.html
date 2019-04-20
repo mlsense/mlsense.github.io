@@ -1,39 +1,649 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Time series and forecasting using R - MlSense</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Example article description">
+	<meta property="og:title" content="Time series and forecasting using R" />
+<meta property="og:description" content="Example article description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mlsense.github.io/posts/time-series-post/" />
+<meta property="article:published_time" content="2019-04-16T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-04-16T00:00:00&#43;00:00"/>
 
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Time series and forecasting using R"/>
+<meta name="twitter:description" content="Example article description"/>
 
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="MlSense" rel="home">
+				<div class="logo__title">MlSense</div>
+				<div class="logo__tagline">Making sense of Machine learning</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">Blog</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">About</a>
+		</li>
+	</ul>
+</nav>
 
-<style>
-#share-buttons {display: inline-block; vertical-align: middle; }
-#share-buttons:after {content: ""; display: block; clear: both;}
-#share-buttons > div {
-position: relative;
-text-align: left; 
-height: 36px; 
-width: 32px; 
-float: left; 
-text-align: center;
-}
-#share-buttons > div > svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
-#share-buttons > div:hover {cursor: pointer;}
-#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
-#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
-#share-buttons > div.linkedin:hover > svg {fill: #0077b5;}
-#share-buttons > div.pinterest:hover > svg {fill: #CB2027;}
-#share-buttons > div.gplus:hover > svg {fill: #dd4b39;}
-#share-buttons > div.mail:hover > svg {fill: #7D7D7D;}
-#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
-#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
-#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
-#share-buttons > div.linkedin > svg {height: 19px; margin-top: 7px;}
-#share-buttons > div.pinterest > svg {height: 20px; margin-top: 9px;}
-#share-buttons > div.gplus > svg {height: 17px; margin-top: 9px; position: relative; left: 1px;}
-#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
-</style>
-
-<span style="color: silver;">Share on: </span><div id="share-buttons">
-<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/mlsense.github.io\/\/posts\/time-series-post\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
-<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/mlsense.github.io\/\/posts\/time-series-post\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
-<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/mlsense.github.io\/\/posts\/time-series-post\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
-
-<div class="gplus" title="Share this on Google Plus" onclick="window.open('https://plus.google.com/share?url=https:\/\/mlsense.github.io\/\/posts\/time-series-post\/');"><svg viewBox="0 0 2304 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"/></svg></div>
-<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/mlsense.github.io\/\/posts\/time-series-post\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Time series and forecasting using R</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-04-16T00:00:00">April 16, 2019</time>
 </div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/category-1" rel="category">Category 1</a>, <a class="meta__link" href="/categories/category-2" rel="category">Category 2</a></span>
+</div>
+</div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-time-series">What is time series?</a></li>
+<li><a href="#what-is-the-difference-between-a-time-series-and-a-normal-series">What is the difference between a time series and a normal series?</a></li>
+<li><a href="#how-to-define-a-time-series-object-in-r">How to define a time series object in R</a></li>
+<li><a href="#frequency">Frequency</a></li>
+<li><a href="#how-about-frequency-for-smaller-interval-time-series">How about frequency for smaller interval time series</a></li>
+<li><a href="#some-useful-packages">Some useful packages</a></li>
+<li><a href="#three-examples">Three examples</a></li>
+<li><a href="#fully-automated-forecast">Fully automated forecast</a></li>
+<li><a href="#some-simple-forecasting-methods">Some simple forecasting methods</a></li>
+<li><a href="#forecast-objects-in-r">Forecast objects in R</a></li>
+<li><a href="#a-simple-example-on-the-beer-time-series">A simple example on the beer time series</a></li>
+<li><a href="#measures-of-forecast-accuracy">Measures of forecast accuracy</a></li>
+<li><a href="#test-methods-on-a-test-set">Test methods on a test set</a></li>
+<li><a href="#simple-methods-for-the-beer-data">Simple methods for the BEER data</a></li>
+<li><a href="#in-sample-accuracy">In-sample accuracy</a></li>
+<li><a href="#out-of-sample-accuracy">Out-of-sample accuracy</a></li>
+<li><a href="#exponential-smoothing">Exponential smoothing</a></li>
+<li><a href="#general-notation">General notation</a></li>
+<li><a href="#some-examples">Some examples</a></li>
+<li><a href="#arima-forecasting">ARIMA forecasting</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			
+
+<p>Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert. But forecasting is something that is a little domain specific.
+<br>
+<br>
+Retailers like Walmart, Target use forecasting systems and tools to replenish their products in the stores. An excellent forecast system helps in winning the other pipelines of the supply chain. If you are good at predicting the sale of items in the store, you can plan your inventory count well. You can plan your assortment well.
+<br></p>
+
+<p>A good forecast leads to a series of wins in the other pipelines in the supply chain.
+<br>
+<br>
+<strong>Disclaimer</strong>: <em>The following post is  my notes on forecasting which I have taken while having read several posts from Prof. Hyndman</em>.
+<br>
+<br>
+Let us get started. First things first.
+<br></p>
+
+<h3 id="what-is-time-series">What is time series?</h3>
+
+<p>A time series is a sequence of observations collected at some time intervals. Time plays an important role here. The observations collected are dependent on the time at which it is collected.</p>
+
+<p>The sale of an item say Turkey wings in a retail store like Walmart will be a time series. The sale could be at daily level or weekly level. The number of people flying from Bangalore to Kolkata on daily basis is a time series. Time is important here. During Durga Puja holidays, this number would be humongous compared to the other days. This is know as seasonality.
+<br>
+<br></p>
+
+<h3 id="what-is-the-difference-between-a-time-series-and-a-normal-series">What is the difference between a time series and a normal series?</h3>
+
+<p>Time component is important here. The time series is dependent on the time. However a normal series say 1, 2, 3&hellip;100 has no time component to it. When the value that a series will take depends on the time it was recorded, it is a time series.
+<br>
+<br></p>
+
+<h3 id="how-to-define-a-time-series-object-in-r">How to define a time series object in R</h3>
+
+<p>ts() function is used for equally spaced time series data, it can be at any level. Daily, weekly, monthly, quarterly, yearly or even at minutes level. If you wish to use unequally spaced observations then you will have to use other packages.
+<br>
+<br>
+ts() is used for numerical observations and you can set frequency of the data.
+ts() takes a single frequency argument. There are times when there will be multiple frequencies in a time series. We use msts() multiple seasonality time series in such cases. I will talk about msts() in later part of the post. For now, let us define what is frequency.
+<br>
+<br></p>
+
+<h3 id="frequency">Frequency</h3>
+
+<p>When setting the frequency, many people are confused what should be the correct value. This is the simple definition of frequency.
+Frequency is the number of observations per cycle. Now, how you define what a cycle is for a time series?
+<br>
+<br>
+Say, you have electricity consumption of Bangalore at hourly level. The cycle could be a day, a week or even annual. I will cover what frequency would be for all different type of time series.
+<br>
+<br>
+Before we proceed I will reiterate this.</p>
+
+<blockquote>
+<p>Frequency is the number of observations per cycle.</p>
+</blockquote>
+
+<p><br>
+We will see what values frequency takes for different interval time series.
+<br></p>
+
+<p><strong>Daily data</strong> There could be a weekly cycle or annual cycle. So the frequency could be 7 or 365.25.</p>
+
+<p>Some of the years have 366 days (leap years). So if your time series data has longer periods, it is better to use frequency = 365.25. This takes care of the leap year as well which may come in your data.
+<br>
+<br>
+<strong>Weekly data</strong>
+There could be an annual cycle.
+frequency = 52 and if you want to take care of leap years then use frequency = 365.<sup>25</sup>&frasl;<sub>7</sub>
+<br>
+<br>
+<strong>Monthly data</strong>
+Cycle is of one year. So frequency = 12
+<br>
+<br>
+<strong>Quarterly data</strong> Again cycle is of one year. So frequency = 4
+<br>
+<br>
+<strong>Yearly data</strong> Frequency = 1
+<br>
+<br></p>
+
+<h3 id="how-about-frequency-for-smaller-interval-time-series">How about frequency for smaller interval time series</h3>
+
+<p><strong>Hourly</strong> The cycles could be a day, a week, a year. Corresponding frequencies could be 24, 24 X 7, 24 X 7 X 365.25
+<br>
+<br>
+<strong>Half-hourly</strong> The cycle could be a day, a week, a year. Corresponding frequencies could be 48, 48 X 7, 48 X 7 X 365.25
+<br>
+<br>
+<strong>Minutes</strong>
+The cycle could be hourly, daily, weekly, annual. Corresponding frequencies would be 60, 60 X 24, 60 X 24 X 7, 60 X 24 X 365.25
+<br>
+<br>
+<strong>Seconds</strong> The cycle could be a minute, hourly, daily, weekly, annual. Corresponding frequencies would be 60, 60 X 60, 60 X 60 X 24,
+60 X 60 X 24 X 7, 60 X 60 X 24 X 365.25
+<br>
+<br>
+You might have observed, I have not included monthly cycles in any of the time series be it daily or weekly, minutes, etc. The short answer is, it is rare to have monthly seasonality in time series. To read more on this visit <a href="http://robjhyndman.com/hyndsight/monthly-seasonality/">monthly-seasonality</a>.
+<br>
+<br>
+Now that we understand what is time series and how frequency is associated with it let us look at some practical examples.
+<br>
+<br></p>
+
+<h3 id="some-useful-packages">Some useful packages</h3>
+
+<ol>
+<li><p>forecast: For forecasting functions</p></li>
+
+<li><p>tseries: For unit root tests and GARC models</p></li>
+
+<li><p>Mcomp: Time series data from forecasting competitions</p></li>
+
+<li><p>fma: For data</p></li>
+
+<li><p>expsmooth: For data</p></li>
+
+<li><p>fpp: For data
+<br>
+<br>
+We will now look at few examples of forecasting. We will look at three examples. Before that we will need to install and load this R package - <em>fpp</em>.</p></li>
+</ol>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">install</span>.<span style="color:#a6e22e">packages</span>(<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">fpp</span><span style="color:#960050;background-color:#1e0010">&#39;</span>)
+<span style="color:#a6e22e">library</span>(<span style="color:#a6e22e">fpp</span>)</code></pre></div>
+
+<h3 id="three-examples">Three examples</h3>
+
+<p><strong>Sale of beer in Australia</strong></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">dev</span>.<span style="color:#a6e22e">off</span>() <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">open</span> <span style="color:#a6e22e">up</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">plots</span> <span style="color:#a6e22e">with</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">settings</span>.
+<span style="color:#a6e22e">ausbeer</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">quarterly</span> <span style="color:#a6e22e">level</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">sale</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">beer</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">each</span> <span style="color:#a6e22e">quarter</span>.
+<span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">ausbeer</span>)
+<span style="color:#a6e22e">beer</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">aggregate</span>(<span style="color:#a6e22e">ausbeer</span>) <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Converting</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">sale</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">beer</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">yearly</span> <span style="color:#a6e22e">level</span>
+<span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">beer</span>, <span style="color:#a6e22e">main</span> = <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">Sale</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">beer</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">yearly</span> <span style="color:#a6e22e">level</span><span style="color:#960050;background-color:#1e0010">&#39;</span>)</code></pre></div>
+
+<p><br>
+<img src="http://manishbarnwal.com/images/time_series_basics/beer_plot.png" alt="photo of beer_plot" />
+<br></p>
+
+<p><strong>Sales of a group of pharmaceuticals</strong></p>
+
+<p><pre style="font-size:60%; padding:7px; margin:0em;">
+<code class="r">
+<em>a10 is a group of pharmaceuticals</em>
+a10 # Sale of pharmaceuticals at monthly level from 1991 to 2008
+head(a10)
+plot(a10, main = &lsquo;Sale of pharmaceuticals at monthly level&rsquo;)
+</code></pre>
+<br>
+<br>
+<strong>Electricity demand for a period of 12 weeks on daily basis</strong></p>
+
+<pre><code>head(taylor)
+plot(taylor)
+</code></pre>
+
+<h3 id="fully-automated-forecast">Fully automated forecast</h3>
+
+<pre><code>plot(forecast(beer))
+</code></pre>
+
+<p><img src="http://manishbarnwal.com/images/time_series_basics/beer_forecast_plot.png" alt="photo of beer_forecast_plot.png" /></p>
+
+<p>The blue line is a point forecast. You can see it has picked the annual trend. The inner shade is a 90% prediction interval and the outer shade is a 95% prediction interval.
+<br>
+<br>
+Similar forecast plots for a10 and electricity demand can be plotted using</p>
+
+<pre><code>plot(forecast(a10))
+plot(forecast(taylor))
+</code></pre>
+
+<h3 id="some-simple-forecasting-methods">Some simple forecasting methods</h3>
+
+<p>These are benchmark methods. You shouldn&rsquo;t use them. You will see why. These are naive and basic methods.</p>
+
+<ol>
+<li><p><strong>Mean method</strong>: Forecast of all future values is equal to mean of historical data
+Mean: meanf(x, h=10)</p></li>
+
+<li><p><strong>Naive method</strong>: Forecasts equal to last observed value
+Optimal for efficient stock markets
+naive(x, h=10) or rwf(x, h=10); rwf stands for random walk function</p></li>
+
+<li><p><strong>Seasonal Naive method</strong>: Forecast equal to last historical value in the same season
+snaive(x, h=10)</p></li>
+
+<li><p><strong>Drift method</strong>: Forecasts equal to last value plus average change
+Equivalent to extrapolating the line between the first and last observations
+rwf(x, drift = T, h=10)
+<br>
+<br></p>
+
+<h3 id="forecast-objects-in-r">Forecast objects in R</h3>
+
+<p>Functions that output a forecast object are:</p></li>
+
+<li><p>meanf()</p></li>
+
+<li><p>croston() Method used in supply chain forecast. For example to forecast the number of spare parts required in weekend</p></li>
+
+<li><p>holt(), hw()</p></li>
+
+<li><p>stlf()</p></li>
+
+<li><p>ses() Simple exponential smoothing
+<br>
+<br>
+Once you train a forecast model on a time series object, the model returns an output of forecast class that contains the following:</p></li>
+</ol>
+
+<ul>
+<li><p>Original series</p></li>
+
+<li><p>Point forecasts</p></li>
+
+<li><p>Prediction intervals</p></li>
+
+<li><p>Forecasting method used</p></li>
+
+<li><p>Residuals and in-sample one-step forecasts
+<br>
+<br></p>
+
+<h3 id="a-simple-example-on-the-beer-time-series">A simple example on the beer time series</h3>
+
+<pre><code>plot(beer)
+fit &lt;- ses(beer)
+attributes(fit)
+plot(fit)
+</code></pre>
+
+<h3 id="measures-of-forecast-accuracy">Measures of forecast accuracy</h3></li>
+
+<li><p><strong>MAE</strong>: Mean Absolute Error</p></li>
+</ul>
+
+<ol>
+<li><p><strong>MSE or RMSE</strong>: Mean Square Error or Root Mean Square Error</p></li>
+
+<li><p><strong>MAPE</strong>: Mean Absolute Percentage Error
+<br>
+<br>
+MAE, MSE, RMSE are scale dependent.</p></li>
+</ol>
+
+<p>MAPE is scale independent but is only sensible if the time series values &gt;&gt;0 for all i and y has a natural zero
+<br>
+<br></p>
+
+<h3 id="test-methods-on-a-test-set">Test methods on a test set</h3>
+
+<pre><code>ausbeer # is at quarterly level the sale of beer in each quarter.
+plot(ausbeer)
+beer &lt;- aggregate(ausbeer) # Converting to sale of beer at yearly level
+plot(beer) # plot of yearly beer sales from 1956 to 2007
+
+beer_train &lt;- window(beer, end = 1994.99) # data from 1956 till 1994
+plot(beer_train)
+
+beer_test &lt;- window(beer, start = 1995) # data from 1995 till 2007
+plot(beer_test)
+
+a10Train &lt;- window(a10, end=2005.99)
+a10Test &lt;- window(a10, start = 2006)
+</code></pre>
+
+<h3 id="simple-methods-for-the-beer-data">Simple methods for the BEER data</h3>
+
+<pre><code>f1 &lt;- meanf(beer_train, h=8)
+f2 &lt;- rwf(beer_train, h=8)
+f3 &lt;- rwf(beer_train, drift = T, h = 8)
+
+plot(f1)
+plot(f2)
+plot(f3)
+
+</code></pre>
+
+<h3 id="in-sample-accuracy">In-sample accuracy</h3>
+
+<p>This will give you in-sample accuracy but that is not of much use. It just gives you an idea how will the model fit into the data. Chances are that the model may not fit well into the test data. So we should always look at the accuracy from the test data.</p>
+
+<pre><code>accuracy(f1)
+accuracy(f2)
+accuracy(f3)
+</code></pre>
+
+<h3 id="out-of-sample-accuracy">Out-of-sample accuracy</h3>
+
+<pre><code>accuracy(f1, beer_test)
+accuracy(f2, beer_test)
+accuracy(f3, beer_test)
+</code></pre>
+
+<h3 id="exponential-smoothing">Exponential smoothing</h3>
+
+<p>This method has been around since 1990s.</p>
+
+<pre><code>fit1 &lt;- ets(beer_train, model = &quot;ANN&quot;, damped = F)
+fit2 &lt;- ets(beer_train)
+
+accuracy(fit1)
+accuracy(fit2)
+
+fcast1 &lt;- forecast(fit1, h=8)
+fcast2 &lt;- forecast(fit2, h=8)
+plot(fcast2)
+
+accuracy(fcast1, beer_test)
+accuracy(fcast2, beer_test)
+</code></pre>
+
+<h3 id="general-notation">General notation</h3>
+
+<p>ETS(Error, Trend, Seasonal)
+ETS(ExponenTial Smoothing)</p>
+
+<p>ETS(X, Y, Z):
+&lsquo;X&rsquo; stands for whether you add the errors or multiply the errors on point forecasts.</p>
+
+<p>&lsquo;Y&rsquo; stands for whehter the trend component is additive or multiplicative or multiplicative damped</p>
+
+<p>&lsquo;Z&rsquo; stands for whether the seasonal component is additive or multiplicative or multiplicative damped
+<br>
+<br></p>
+
+<h3 id="some-examples">Some examples</h3>
+
+<ol>
+<li><p>ETS(A, N, N): Simple exponential smoothing with additive errors
+&lsquo;A&rsquo;/&rsquo;M&rsquo; stands for whether you add the errors on or multiply the errors on the point forecsats</p></li>
+
+<li><p>ETS(A, A, N): HOlt&rsquo;s linear method with additive errors</p></li>
+
+<li><p>ETS(A, A, A): Additive Holt-Winter&rsquo;s method with addtitive errors</p></li>
+
+<li><p>ETS(M, A, M): Multiplicative Holt-Winter&rsquo;s method with multiplicative errors
+<br>
+<br>
+There are 30 separate models in the ETS framework. However 11 of them are unstable so only 19 ETS models. So when you don&rsquo;t specify what model to use in <em>model</em> parameter, it fits all the 19 models and comes out with the best model using AIC criteria.
+<br>
+<br>
+```
+model1 &lt;- ets(a10Train)
+model2 &lt;- ets(a10Train, model = &lsquo;MMM&rsquo;, damped = F)</p></li>
+</ol>
+
+<p>forecast1 &lt;- forecast(model1, h=30)
+forecast2 &lt;- forecast(model2, h=30)</p>
+
+<pre><code>&lt;br&gt;
+*There are many other parameters in the model which I suggest not to touch unless you know what you are doing*. - Prof Hyndman
+
+If you want to have a look at the parameters that the method chose. Just type in the name of your model.
+
+</code></pre>
+
+<p>model1</p>
+
+<pre><code>
+You will see the values of *alpha*, *beta*, *gamma*. Also,
+
+*sigma*: the standard deviation of the residuals
+
+*AIC*: Akaike Information criteria. AIC gives you and idea how well the model fits the data. ets fits all the 19 models, looks at the AIC and give the model with the lowest AIC. The lower the AIC, the better the model fits.
+&lt;br&gt;
+
+*AICc*: Corrected Akaike Information criteria
+&lt;br&gt;
+
+*BIC*: Bayesian Information Criteria
+&lt;br&gt;
+&lt;br&gt;
+### ets() function
+
+1. Automatically chooses a model by default using the AIC, AICc, BIC
+
+2. Can handle any combination of trend, seasonality and damping
+
+3. Produces prediction intervals for every model
+
+4. Ensures the parameters are admissible (equivalent to invertible)
+
+5. Produces an object of class ets
+&lt;br&gt;
+&lt;br&gt;
+**ets objects**
+
+1. **Methods**: coef(), plot(), summary(), residuals(), fitted(), simulate() and forecast()
+
+2. *plot()* function shows the time plots of the original series along with the extracted components (level, growth and seasonal)
+&lt;br&gt;
+&lt;br&gt;
+### Automatic forecasting
+**Why use automatic forecasting?**
+
+1. Most users are not very expert at fitting time series models
+
+2. Most experts cannot beat the best automatic algorithms. Prof. Hyndman accepted this fact for himself as well. He has been doing forecasting for the last 20 years.
+
+3. Most busines need thousands of forecasts every week/month and they need it fast. You have to do it automatically.
+
+4. Some multivariate forecasting methods depend on many univariate forecasts.
+&lt;br&gt;
+&lt;br&gt;
+### Box-Cox transformations
+**Transformations to stabilize the variance**
+If the data show different variation at different levels of the series, then a transformation can be useful.
+
+</code></pre>
+
+<p>plot(a10)</p>
+
+<pre><code>![photo of a10_plot.png](http://manishbarnwal.com/images/time_series_basics/a10_plot.png)
+
+As you can see, the variation is increasing with the level of the series and the variation is multiplicative. If we take a log of the series, we will see that the variation becomes a little stable.
+&lt;br&gt;
+&lt;br&gt;
+</code></pre>
+
+<p>plot(log(a10), xlab = &lsquo;Time&rsquo;, ylab = &lsquo;Log of a10&rsquo;, main = &lsquo;log of a10&rsquo;)</p>
+
+<pre><code>![photo of a10_log_plot.png](http://manishbarnwal.com/images/time_series_basics/a10_log_plot.png)
+&lt;br&gt;
+&lt;br&gt;
+Box-Cox transformations gives you value of parameter, *lambda*. And based on this value you decide if any transformation is needed or not.
+
+1. lambda = 1 ; No substantive transformation
+
+2. lambda = 1/2 ; Square root plus linear transformation
+
+3. lambda = 0 ; Natural logarithm
+
+4. lambda = -1; Inverse plus 1
+&lt;br&gt;
+&lt;br&gt;
+### Back-transformation
+We must reverse the transformation (or back transform) to obtain forecasts on the original scale.
+
+</code></pre>
+
+<p>a10 # Sale of pharmaceuticals at monthly level from 1991 to 2008
+plot(a10)
+lam &lt;- BoxCox.lambda(a10) # 0.131
+lam
+fit &lt;- ets(a10, additive = T, lambda = lam)  # &lsquo;additive = T&rsquo; implies we only want to consider additive models
+plot(forecast(fit))
+plot(forecast(fit), include=60)
+```</p>
+
+<h3 id="arima-forecasting">ARIMA forecasting</h3>
+
+<p><strong>R functions</strong></p>
+
+<ol>
+<li><p>The arima() function in the <em>stats</em> package provides seasonal and non-seasonal ARIMA model estimation including covariates</p></li>
+
+<li><p>However, it does not allow a constant unless the model is stationary</p></li>
+
+<li><p>It does not return everything required for forecast()</p></li>
+
+<li><p>It does not allow re-fitting a model to new data</p></li>
+
+<li><p>Use the <em>Arima()</em> function in the <em>forecast</em> package which acts as a wrapper to <em>arima()</em></p></li>
+
+<li><p>Or use <em>auto.arima()</em> function in the forecast package and it will find the model for you
+<br>
+<br>
+This post was just a starter to time series. I will talk more about time series and forecasting in future posts. I plan to cover each of these methods - ses(), ets(), and Arima() in detail in future posts.
+<br>
+<br>
+Did you find the article useful? If you did, share your thoughts in the comments. Share this post with people who you think would enjoy reading this. Let&rsquo;s talk more of data-science.</p></li>
+</ol>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/ml/" rel="tag">ML</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
+	</ul>
+</div>
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/types_of_data_recommender_system/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Types of data in recommender systems</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/posts/my-first-hugo-post/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">My First Hugo Post</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mlsense-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 MlSense.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
