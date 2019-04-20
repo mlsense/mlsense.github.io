@@ -6,10 +6,21 @@
     <description>Recent content in Posts on MlSense</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Apr 2019 16:56:04 +0530</lastBuildDate>
     
 	<atom:link href="https://mlsense.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My First Hugo Post</title>
+      <link>https://mlsense.github.io/posts/my-first-hugo-post/</link>
+      <pubDate>Wed, 17 Apr 2019 16:56:04 +0530</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/my-first-hugo-post/</guid>
+      <description> Hello world,
+I am trying to create a site using Hugo static site generator. This is a markdown page.
+Trying color syntaxing import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns # Add comment here  </description>
+    </item>
     
     <item>
       <title>Time series and forecasting using R</title>
