@@ -56,8 +56,7 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
       <pubDate>Tue, 18 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://mlsense.github.io/posts/random_forest_explained_intuitively/</guid>
-      <description>Title: Random Forest explained intuitively date: 2016-10-18 8:00 comments: true slug: random_forest_explained_intuitively Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post explains random forest intuitively Keywords: random forest, random forest tutorial, data-science, manish barnwal
-Random Forests algorithm has always fascinated me. I like how this algorithm can be easily explained to anyone without much hassle. One quick example, I use very frequently to explain the working of random forests is the way a company has multiple rounds of interview to hire a candidate.</description>
+      <description>A little fun fact. The image that you see in this post was drawn by Professor Adele Cutler&amp;rsquo;s son. Professor Adele is has worked very closely with Prof. Breiman on Random forest. Prof. Breiman wanted a simple photo that captured the essence of simplicity and comprehensiveness of Random forest algorithm. Let us get started. Random Forests algorithm has always fascinated me. I like how this algorithm can be easily explained to anyone without much hassle.</description>
     </item>
     
     <item>
