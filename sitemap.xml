@@ -9,19 +9,36 @@
   
   <url>
     <loc>https://mlsense.github.io/</loc>
-    <lastmod>2019-04-17T16:56:04+05:30</lastmod>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/vim_shortcuts/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/tutorial/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mlsense.github.io/posts/my-first-hugo-post/</loc>
     <lastmod>2019-04-17T16:56:04+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/</loc>
-    <lastmod>2019-04-17T16:56:04+05:30</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -50,12 +67,6 @@
   
   <url>
     <loc>https://mlsense.github.io/tags/python/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/tags/</loc>
     <lastmod>2019-04-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -187,15 +198,6 @@
   
   <url>
     <loc>https://mlsense.github.io/posts/2018-09-27-types-data-recommender-system/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/vim_shortcuts/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/tags/tutorial/</loc>
     <priority>0</priority>
   </url>
   
