@@ -28,7 +28,7 @@
       <guid>https://mlsense.github.io/posts/my-first-hugo-post/</guid>
       <description> Hello world,
 I am trying to create a site using Hugo static site generator. This is a markdown page.
-Trying color syntaxing using pygmentize import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns # Add comment here  Using hugo syntax highlight \# Loading required packages import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns </description>
+Trying color syntaxing using pygmentize import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns # Add comment here  Using hugo syntax highlight # Loading required packages import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns </description>
     </item>
     
     <item>
