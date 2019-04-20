@@ -22,10 +22,10 @@
     
     <item>
       <title>About</title>
-      <link>https://mlsense.github.io/about/about/</link>
+      <link>https://mlsense.github.io/about/about_about/</link>
       <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mlsense.github.io/about/about/</guid>
+      <guid>https://mlsense.github.io/about/about_about/</guid>
       <description>I am a Data Scientist at Zeta Global building recommendation engines for media publishing houses. These days I am learning how recommendation engines work, exploring techniques like matrix factorization, factorization machines, and others. I have started using Python and I am loving it! I am a graduate from IIT Kharagpur with a Masters in Mathematics and Computing. I have picked up much of my understanding of machine learning at @WalmartLabs where I worked as Sr.</description>
     </item>
     
