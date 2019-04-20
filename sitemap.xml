@@ -42,43 +42,25 @@
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/categories/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://mlsense.github.io/posts/types_of_data_recommender_system/</loc>
+    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/categories/category-1/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/categories/category-2/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
+    <loc>https://mlsense.github.io/tags/recommendation-system/</loc>
+    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mlsense.github.io/tags/ml/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/tags/python/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/time-series-post/</loc>
-    <lastmod>2019-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/types_of_data_recommender_system/</loc>
-    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+    <loc>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -175,11 +157,6 @@
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mlsense.github.io/posts/2017-05-12-ml-function-estimation/</loc>
     <priority>0</priority>
   </url>
@@ -215,7 +192,7 @@
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/posts/2018-09-27-types-data-recommender-system/</loc>
+    <loc>https://mlsense.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   

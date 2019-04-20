@@ -22,6 +22,24 @@ This is not an exhaustive list. These are the ones I use frequently. Feel free t
     </item>
     
     <item>
+      <title>Types of data in recommender systems</title>
+      <link>https://mlsense.github.io/posts/types_of_data_recommender_system/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/types_of_data_recommender_system/</guid>
+      <description>There are two ways in which we can collect data for building recommender systems — explicit and implicit. In this post, we will talk about both types of data, their characteristics and the challenges with them. Explicit feedback datasets The dictionary meaning of explicit is to state clearly and in detail. Explicit feedback data as the name suggests is an exact number given by a user to a product. Some of the examples of explicit feedback are ratings of movies by users on Netflix, ratings of products by users on Amazon.</description>
+    </item>
+    
+    <item>
+      <title>Time series and forecasting using R</title>
+      <link>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</guid>
+      <description>Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert. But forecasting is something that is a little domain specific. Retailers like Walmart, Target use forecasting systems and tools to replenish their products in the stores. An excellent forecast system helps in winning the other pipelines of the supply chain.</description>
+    </item>
+    
+    <item>
       <title>The curse of bias and variance</title>
       <link>https://mlsense.github.io/posts/the_curse_of_bias_and_variance/</link>
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
