@@ -179,11 +179,14 @@ docker-compose up -d  <span style="color:#75715e"># ups the containers in backgr
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker images</code></pre></div></p>
 
 <ul>
-<li><p><strong>docker ps</strong>
-Lists all the containers running for the docker image.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps</code></pre></div></p></li>
+<li><strong>docker ps</strong></li>
+</ul>
 
-<li><p><strong>docker-compose down</strong></p></li>
+<p>Lists all the containers running for the docker image.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps</code></pre></div></p>
+
+<ul>
+<li><strong>docker-compose down</strong></li>
 </ul>
 
 <p>This will shut down the containers
@@ -210,11 +213,12 @@ docker logs docker_master
 <span style="color:#75715e"># gives you the logs since 60 minutes</span></code></pre></div></p>
 
 <ul>
-<li><strong>docker exec</strong>
-If you want to talk to of one of the machines, say you want to go to the bash of docker_master you do so by typing
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it docker_master bash
-<span style="color:#75715e"># This will take you to the bash of the master</span></code></pre></div></li>
+<li><strong>docker exec</strong></li>
 </ul>
+
+<p>If you want to talk to of one of the machines, say you want to go to the bash of docker_master you do so by typing
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it docker_master bash
+<span style="color:#75715e"># This will take you to the bash of the master</span></code></pre></div></p>
 
 <p>I recently wanted to know what all python packages were installed in my docker. I wanted to know the python packages installed in docker_worker_1 container. You can do so by typing
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec docker_worker_1 pip list</code></pre></div></p>
@@ -228,7 +232,7 @@ If you want to talk to of one of the machines, say you want to go to the bash of
 
 example: docker cp docker_worker_1:/tmp/some-folder/some-file.txt .</code></pre></div></p>
 
-<p>Obviously, the above list is not exhaustive. There are many but these are a few that I have used most so far. Let me know in comments what other commands you use. Hit the share button!</p>
+<p>Obviously, the above list is not exhaustive. There are many but these are a few that I have used most so far. Let me know in comments what other commands you use. If you enjoyed reading this, hit the share button!</p>
 
 		</div>
 		
