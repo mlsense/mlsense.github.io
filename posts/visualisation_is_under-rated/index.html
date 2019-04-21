@@ -144,17 +144,9 @@ I have learnt more about R by looking at other people&rsquo;s codes. Look at the
 <br>
 <br>
 In this post, I would just share the code snippets for the most common visualisation tasks. Below are some of the most common plots to know about your data.
-<br>
 <br></p>
 
 <h3 id="barplot">Barplot</h3>
-
-<!-- <pre style="font-size:60%; padding:7px; margin:0em;">
-<code class="r"> ggplot(data = mpg) +
-  geom_bar(mapping = aes(x = as.factor(class))) +
-  ggtitle(label = 'Plot of class of vehicle') +
-  xlab('Class of vehicle') + ylab('Count')
-</code></pre> -->
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
 geom_bar(mapping <span style="color:#f92672">=</span> aes(x <span style="color:#f92672">=</span> <span style="color:#66d9ef">as.factor</span>(<span style="color:#66d9ef">class</span>))) <span style="color:#f92672">+</span>
@@ -167,13 +159,6 @@ xlab(<span style="color:#e6db74">&#39;Class of vehicle&#39;</span>) <span style=
 
 <p>The scatterplot is useful for displaying the relationship between two continuous variables, although it can also be used with one continuous and one categorical variable, or two categorical variables.</p>
 
-<!-- <pre style="font-size:60%; padding:7px; margin:0em;">
-<code class="r"> ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy)) +
-  ggtitle(label = 'Plot of engine size v/s mileage') +
-  xlab('Engine size (litres)') + ylab('Highway mileage')
-</code></pre> -->
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
 geom_point(mapping <span style="color:#f92672">=</span> aes(x <span style="color:#f92672">=</span> displ, y <span style="color:#f92672">=</span> hwy)) <span style="color:#f92672">+</span>
 ggtitle(label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Plot of engine size v/s mileage&#39;</span>) <span style="color:#f92672">+</span>
@@ -182,12 +167,6 @@ xlab(<span style="color:#e6db74">&#39;Engine size (litres)&#39;</span>) <span st
 <span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
 <span style="color:#75715e">### Linechart plot</span>
-<span style="color:#f92672">&lt;!--</span> <span style="color:#f92672">&lt;</span>pre style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size:60%; padding:7px; margin:0em;&#34;</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;</span>code class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">&gt;</span> ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
-  geom_line(mapping <span style="color:#f92672">=</span> aes(x <span style="color:#f92672">=</span> displ, y <span style="color:#f92672">=</span> hwy)) <span style="color:#f92672">+</span>
-  ggtitle(label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Plot of engine size v/s mileage&#39;</span>) <span style="color:#f92672">+</span>
-  xlab(<span style="color:#e6db74">&#39;Engine size (litres)&#39;</span>) <span style="color:#f92672">+</span> ylab(<span style="color:#e6db74">&#39;Highway mileage&#39;</span>)
-<span style="color:#f92672">&lt;/</span>code<span style="color:#f92672">&gt;&lt;/</span>pre<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--&gt;</span>
 
 <span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;highlight&#34;</span><span style="color:#f92672">&gt;&lt;</span>pre style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span><span style="color:#f92672">&gt;&lt;</span>code class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;language-R&#34;</span> data<span style="color:#f92672">-</span>lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;R&#34;</span><span style="color:#f92672">&gt;</span>ggplot(data <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;=&lt;/</span>span<span style="color:#f92672">&gt;</span> mpg) <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;+&lt;/</span>span<span style="color:#f92672">&gt;</span>
   geom_line(mapping <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;=&lt;/</span>span<span style="color:#f92672">&gt;</span> aes(x <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;=&lt;/</span>span<span style="color:#f92672">&gt;</span> displ, y <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;=&lt;/</span>span<span style="color:#f92672">&gt;</span> hwy)) <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;+&lt;/</span>span<span style="color:#f92672">&gt;</span>
