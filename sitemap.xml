@@ -53,9 +53,41 @@
   </url>
   
   <url>
-    <loc>https://mlsense.github.io/tags/ml/</loc>
-    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+    <loc>https://mlsense.github.io/tags/git/</loc>
+    <lastmod>2018-04-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</loc>
+    <lastmod>2018-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/virtual_environment_in_python/</loc>
+    <lastmod>2018-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/python/</loc>
+    <lastmod>2018-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/common_docker_commands/</loc>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/ml/</loc>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</loc>
+    <lastmod>2017-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -165,31 +197,6 @@
   <url>
     <loc>https://mlsense.github.io/posts/big_data_problem/</loc>
     <lastmod>2016-06-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2017-05-18-choosing-probability-cut-off-in-classification/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2017-11-23-docker-commands/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2018-01-23-creating-virtual-env/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2018-04-18-git-and-github-for-data-scientists/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/2018-06-18-dates-in-python/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

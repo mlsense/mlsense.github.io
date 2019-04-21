@@ -61,6 +61,75 @@
 	<header class="main__header">
 		<h1 class="main__title">tutorial</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/introduction_to_adversarial_validation_part2/" rel="bookmark">
+			An illustrated introduction to adversarial validation - part 2
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2017-02-16T00:00:00">February 16, 2017</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		In the last post we talked about the idea of adversarial validation and how it helps the problem when your validation set result doesn&rsquo;t comply with that of test set result. In this post, I will share the R code to help achieve the idea of adversarial validation. The data used would be from Numerai competition. Loading required packages library(randomForest) library(glmnet) library(data.table) library(MLmetrics) getwd() dir() Reading train and test data set train &lt;- fread(&#34;Data/numerai_training_data.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/introduction_to_adversarial_validation_part1/" rel="bookmark">
+			An illustrated introduction to adversarial validation - part 1
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2017-02-15T00:00:00">February 15, 2017</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		You&rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters. Overfitting is when the model does well on training data but fails drastically on test data. The reason could be one of the following:
+ The model is trying to map the exact findings of training data to test data instead of generalizing the patterns.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/introduction_to_adversarial_validation/" rel="bookmark">
+			How to use Git and Github
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2017-02-15T00:00:00">February 15, 2017</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I had taken this course - How to use git and github some time last year. This post is an amalgamation of the course notes and other tutorials I have completed in understanding git. I will talk about the most frequently used commands. If you already are confident of your git skills and wants more of practical tutorial, you should head to this post - git and github for data scientists.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/the_curse_of_bias_and_variance/" rel="bookmark">
+			The curse of bias and variance
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2017-02-08T00:00:00">February 08, 2017</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Statistics is the field of study where we try to draw conclusions about the population from a sample. Why do we talk about sample? Why can&rsquo;t we get the conclusions about the population directly from the population? Let me illustrate this by an example. Let us say we want to understand which brand of beer do the people of Bangalore prefers? An interesting question. If I ask you this question, how would you approach this problem?
+	</div>
+</article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://mlsense.github.io/posts/random_forest_explained_intuitively/">
 			<img src="/img/rf_pic.png" alt="Random Forest explained intuitively" />
@@ -170,34 +239,13 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
 	<div class="content list__excerpt post__content clearfix">
 		A few days ago, I had written a post on The Big Data Problem{:target=&rdquo;_blank&rdquo;} which attempted to understand why we need big data and what the fuss is all about. You may want to read it here{:target=&rdquo;_blank&rdquo;}. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.
 	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://mlsense.github.io/posts/big_data_problem/">
-			<img src="/img/big-data-productivity.png" alt="The Big Data Problem" />
-		</a>
-	</figure>
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/posts/big_data_problem/" rel="bookmark">
-			The Big Data Problem
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2016-06-29T00:00:00">June 29, 2016</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates. American Express was one such company that had talked extensively about big data and hadoop in their presentation. I remember clearly, the blank faces that all of us had.
-	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/tags/tutorial/">«</a>
-	<span class="pagination__item pagination__item--current">2/2</span>
+	<span class="pagination__item pagination__item--current">2/3</span>
+	<a class="pagination__item pagination__item--next btn" href="/tags/tutorial/page/3/">»</a>
 </div>
 
 
@@ -219,8 +267,8 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
 			<li class="widget__item"><a class="widget__link" href="/posts/vim_shortcuts/">Vim/Vi editor shortcuts</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/my-first-hugo-post/">My First Hugo Post</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/types_of_data_recommender_system/">Types of data in recommender systems</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/tutorial_on_dplyr/">Tutorial on dplyr- a package for data manipulation in R</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/machine_learning_function_estimation/">The essence of machine learning is function estimation</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/git_and_github_for_data_scientists/">git and github for data scientists</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/virtual_environment_in_python/">Creating a virtual environment in Python</a></li>
 		</ul>
 	</div>
 </div>
