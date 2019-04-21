@@ -51,11 +51,30 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
     </item>
     
     <item>
+      <title>Tutorial on dplyr- a package for data manipulation in R</title>
+      <link>https://mlsense.github.io/posts/tutorial_on_dplyr/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/tutorial_on_dplyr/</guid>
+      <description>R is the most used tool in data science. It has no dearth of packages for specific use cases. There are three packages that I feel can get your most of the work done - ggplot2, dplyr, data.table.  ggplot2- Used for visualization. Also known as grammar of graphics. This package is used to plot graphs. The syntax is intuitive and easy to learn.
+ dplyr- Used for data manipulation.</description>
+    </item>
+    
+    <item>
+      <title>The essence of machine learning is function estimation</title>
+      <link>https://mlsense.github.io/posts/machine_learning_function_estimation/</link>
+      <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/machine_learning_function_estimation/</guid>
+      <description>Machine learning is cool. There is no denying in that. In this post we will try to make it a little uncool, well it will still be cool but you may start looking at it differently. Machine learning is not a black box. It is intuitive and this post is just to convey that. If I give you this function f(x) = x^2 + log(x) and ask to you tell me what will be f(2), you will first laugh at me and then run away to do something important.</description>
+    </item>
+    
+    <item>
       <title>Time series and forecasting using R</title>
-      <link>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</link>
+      <link>https://mlsense.github.io/posts/time_series_basics/</link>
       <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mlsense.github.io/posts/2017-05-03-time-series-forecasting/</guid>
+      <guid>https://mlsense.github.io/posts/time_series_basics/</guid>
       <description>Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert. But forecasting is something that is a little domain specific. Retailers like Walmart, Target use forecasting systems and tools to replenish their products in the stores. An excellent forecast system helps in winning the other pipelines of the supply chain.</description>
     </item>
     
@@ -187,26 +206,6 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
       
       <guid>https://mlsense.github.io/posts/big_data_problem/</guid>
       <description>Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates. American Express was one such company that had talked extensively about big data and hadoop in their presentation. I remember clearly, the blank faces that all of us had.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-05-12-ml-function-estimation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-05-12-ml-function-estimation/</guid>
-      <description>Title: The essence of machine learning is function estimation date: 2017-05-12 8:00 comments: true slug: machine_learning_function_estimation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks explains how the essence of machine learning is function estimation. Keywords: ML, data science, machine learning explained, manish barnwal
-Machine learning is cool. There is no denying in that. In this post we will try to make it a little uncool, well it will still be cool but you may start looking at it differently.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-05-15-dplyr-tutorial/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-05-15-dplyr-tutorial/</guid>
-      <description>Title: Tutorial on dplyr- a package for data manipulation in R date: 2017-05-15 8:00 comments: true slug: tutorial_on_dplyr Category: ML, Data Science Tags: tutorial, R, machine-learning, manish barnwal description: This post is a tutorial on dplyr - a package for data manipulation in R. Keywords: dplyr, dplyr tutorial, dplyr package, R, data manipulation, manish barnwal
-R is the most used tool in data science. It has no dearth of packages for specific use cases.</description>
     </item>
     
     <item>

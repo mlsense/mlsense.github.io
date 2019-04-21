@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>time series on MlSense</title>
+    <link>https://mlsense.github.io/tags/time-series/</link>
+    <description>Recent content in time series on MlSense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mlsense.github.io/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time series and forecasting using R</title>
+      <link>https://mlsense.github.io/posts/time_series_basics/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/time_series_basics/</guid>
+      <description>Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert. But forecasting is something that is a little domain specific. Retailers like Walmart, Target use forecasting systems and tools to replenish their products in the stores. An excellent forecast system helps in winning the other pipelines of the supply chain.</description>
+    </item>
+    
+  </channel>
+</rss>
