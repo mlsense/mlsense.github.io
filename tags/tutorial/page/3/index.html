@@ -12,7 +12,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mlsense.github.io/tags/tutorial/" />
 
-<meta property="og:updated_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-09-27T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="tutorial"/>
@@ -61,6 +61,94 @@
 	<header class="main__header">
 		<h1 class="main__title">tutorial</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/improve_runtime_random_forest_r/" rel="bookmark">
+			Improve runtime of Random Forest in R
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-10-13T00:00:00">October 13, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		There are two ways one can write the code to train a random forest model in R. Both the ways are listed below. A normal and frequent way of writing the command to train the random forest model is something like this. rfModel &lt;- randomForest(Survived~. , data = trainSample[, -c(6, 8, 9)])  Notice the ~ sign. We call this the formula way of writing. Another way of writing the command to train the random forest model is shown below.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/install_a_package_particular_version_in_r/" rel="bookmark">
+			How to install a package of a particular version in R
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-10-05T00:00:00">October 05, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I recently tried installing caret package in R using install.packages(&lsquo;caret&rsquo;, dependencies=T) 
+Normally this installation of package works and I continue to work with the functions associated with the package. When I tried including the package using library(caret) 
+I got the following error.
+Error in loadNamespace(j  R was not able to install this dependency package- pbkrtest. So I tried installing it separately, again using install.package(&lsquo;pbkrtest&rsquo;, dependencies=T)
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/shell_commands_for_data_scientist/" rel="bookmark">
+			Shell commands come in handy for a data scientist
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-09-30T00:00:00">September 30, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I am no expert of shell commands. I have been using them for quite some time and thought I give an attempt to list down the most common commands. I am writing these mostly from the perspective of a data-science guy. Let us get started. I will use the file- ‘data.txt’ to illustrate these commands. ‘data.txt’ is a file having 200 rows and 8 columns. You can access the data here.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/roc_and_auc_three_letter_acronym/" rel="bookmark">
+			ROC and AUC - The three lettered acronyms
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-09-26T00:00:00">September 26, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Confession time I don&rsquo;t feel bad to confess this that ROC curve, AUC, True-positive and related terms took quite some time for me to understand. If today I contemplate on the reasons why I found this topic confusing. The first would be there are not many resources that explains intuitively what these mean. They just jump to the terms and the mathematical formula for them. The second being I had not used them even in my project work.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/hadoop_streaming/" rel="bookmark">
+			Hadoop Streaming
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-08-29T00:00:00">August 29, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		A few days ago, I had written a post on The Big Data Problem which attempted to understand why we need big data and what the fuss is all about. You may want to read it here. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.
+	</div>
+</article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://mlsense.github.io/posts/big_data_problem/">
 			<img src="/img/big-data-productivity.png" alt="The Big Data Problem" />
@@ -81,6 +169,29 @@
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates. American Express was one such company that had talked extensively about big data and hadoop in their presentation. I remember clearly, the blank faces that all of us had.
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://mlsense.github.io/posts/vim_shortcuts/">
+			<img src="/img/vim-commands.png" alt="Vim/Vi editor shortcuts" />
+		</a>
+	</figure>
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/vim_shortcuts/" rel="bookmark">
+			Vim/Vi editor shortcuts
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2014-09-22T00:00:00">September 22, 2014</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Repetitive tasks should be done using as many shortcuts as possible. You are not doing anything new and hence not even an extra minute should be spent on doing the same. This post refers to the shortcuts that come in handy when working on the vi/vim editor.
+This is not an exhaustive list. These are the ones I use frequently. Feel free to comment down your favorite shortcuts. Navigation keys  0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Moves cursor to the start of the line $ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Moves cursor to the end of the line w &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Moves forward one word b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Moves backward one word
 	</div>
 </article>
 </main>
@@ -106,11 +217,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/vim_shortcuts/">Vim/Vi editor shortcuts</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/my-first-hugo-post/">My First Hugo Post</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/types_of_data_recommender_system/">Types of data in recommender systems</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/git_and_github_for_data_scientists/">git and github for data scientists</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/virtual_environment_in_python/">Creating a virtual environment in Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/common_docker_commands/">Common docker commands</a></li>
 		</ul>
 	</div>
 </div>

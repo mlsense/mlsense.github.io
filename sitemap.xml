@@ -9,30 +9,7 @@
   
   <url>
     <loc>https://mlsense.github.io/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/tags/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/posts/vim_shortcuts/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/tags/tutorial/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-17T16:56:04+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -42,12 +19,30 @@
   </url>
   
   <url>
+    <loc>https://mlsense.github.io/posts/</loc>
+    <lastmod>2019-04-17T16:56:04+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/</loc>
+    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mlsense.github.io/posts/types_of_data_recommender_system/</loc>
     <lastmod>2018-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mlsense.github.io/tags/recommendation-system/</loc>
+    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/tutorial/</loc>
     <lastmod>2018-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -197,6 +192,11 @@
   <url>
     <loc>https://mlsense.github.io/posts/big_data_problem/</loc>
     <lastmod>2016-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/posts/vim_shortcuts/</loc>
+    <lastmod>2014-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
