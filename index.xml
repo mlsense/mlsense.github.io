@@ -60,6 +60,43 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
     </item>
     
     <item>
+      <title>Diving into H2O with R</title>
+      <link>https://mlsense.github.io/posts/h2o_with_r/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/h2o_with_r/</guid>
+      <description>The problem Do you understand the pain when you have to train advanced machine learning algorithms like Random Forest on huge datasets? When there is a factor column that has way too many number of levels? When the time taken to train the model is so huge that you went to your pantry for snacks and came back, you are even done browsing 9gag but your model is still training, the code is still running?</description>
+    </item>
+    
+    <item>
+      <title>An illustrated introduction to adversarial validation - part 2</title>
+      <link>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part2/</link>
+      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part2/</guid>
+      <description>In the last post we talked about the idea of adversarial validation{:target=&amp;rdquo;_blank&amp;rdquo;} and how it helps the problem when your validation set result doesn&amp;rsquo;t comply with that of test set result. In this post, I will share the R code to help achieve the idea of adversarial validation. The data used would be from Numerai competition{:target=&amp;rdquo;_blank&amp;rdquo;}. Loading required packages library(randomForest) library(glmnet) library(data.table) library(MLmetrics) getwd() dir() Reading train and test data set train &amp;lt;- fread(&amp;#34;Data/numerai_training_data.</description>
+    </item>
+    
+    <item>
+      <title>An illustrated introduction to adversarial validation - part 1</title>
+      <link>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part1/</link>
+      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part1/</guid>
+      <description>You&amp;rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters. Overfitting is when the model does well on training data but fails drastically on test data. The reason could be one of the following:
+ The model is trying to map the exact findings of training data to test data instead of generalizing the patterns.</description>
+    </item>
+    
+    <item>
+      <title>How to use Git and Github</title>
+      <link>https://mlsense.github.io/posts/introduction_to_adversarial_validation/</link>
+      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/introduction_to_adversarial_validation/</guid>
+      <description>I had taken this course - How to use git and github some time last year. This post is an amalgamation of the course notes and other tutorials I have completed in understanding git. I will talk about the most frequently used commands. If you already are confident of your git skills and wants more of practical tutorial, you should head to this post - git and github for data scientists.</description>
+    </item>
+    
+    <item>
       <title>The curse of bias and variance</title>
       <link>https://mlsense.github.io/posts/the_curse_of_bias_and_variance/</link>
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
@@ -150,56 +187,6 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
       
       <guid>https://mlsense.github.io/posts/big_data_problem/</guid>
       <description>Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates. American Express was one such company that had talked extensively about big data and hadoop in their presentation. I remember clearly, the blank faces that all of us had.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2016-06-22-hive_data_science/</guid>
-      <description>Title: Understanding HIVE for data science people date: 2016-06-22 04:43 comments: true slug: understanding_hive_data_science Category: Big Data Tags: hive, hadoop, big data, manish barnwal description: This post is meant for data science folks who want to use and understand HIVE Keywords: Hive, hadoop, big data, , manish barnwal
-I have been working as Statistical analyst for the last 1.5 years and fortunately I got to work on Hadoop on one of my initial projects.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-02-15-adversarial-validation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-02-15-adversarial-validation/</guid>
-      <description>Title: An illustrated introduction to adversarial validation part 1 date: 2017-02-15 8:00 comments: true slug: introduction_to_adversarial_validation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about adversarial validation- an approach to the problem of differently distributed training and test data. Keywords: ML, data science, cross-validation, adversarial-validation, manish barnwal
-You&amp;rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-02-15-git-and-github/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-02-15-git-and-github/</guid>
-      <description>Title: How to use Git and Github date: 2017-02-15 10:00 comments: true slug: git_and_github Category: ML, Data Science Tags: tutorial, manish barnwal description: This post talks about the usage of git and github Keywords: git, github, manish barnwal
-I had taken this course - How to use git and github some time last year. This post is an amalgamation of the course notes and other tutorials I have completed in understanding git.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-02-16-adversarial-validation-code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-02-16-adversarial-validation-code/</guid>
-      <description>Title: An illustrated introduction to adversarial validation part 2 date: 2017-02-16 8:00 comments: true slug: introduction_to_adversarial_validation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about adversarial validation- an approach to the problem of differently distributed training and test data. Keywords: ML, data science, cross-validation, adversarial-validation, manish barnwal
-In the last post we talked about the idea of adversarial validation{:target=&amp;rdquo;_blank&amp;rdquo;} and how it helps the problem when your validation set result doesn&amp;rsquo;t comply with that of test set result.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-03-28-diving-into-h2o/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-03-28-diving-into-h2o/</guid>
-      <description>Title: Diving into H2O with R date: 2017-03-28 7:00 comments: true slug: h2o_with_r Category: ML, Data Science Tags: tutorial, machine-learning, big data, R, manish barnwal description: This post talks about building machine learning models in H2O using R. Keywords: h2o tutorial, parallel processing, big data, R, manish barnwal
-Do you understand the pain when you have to train advanced machine learning algorithms like Random Forest on huge datasets? When there is a factor column that has way too many number of levels?</description>
     </item>
     
     <item>

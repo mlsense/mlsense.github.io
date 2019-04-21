@@ -61,6 +61,82 @@
 	<header class="main__header">
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://mlsense.github.io/posts/random_forest_explained_intuitively/">
+			<img src="/img/rf_pic.png" alt="Random Forest explained intuitively" />
+		</a>
+	</figure>
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/random_forest_explained_intuitively/" rel="bookmark">
+			Random Forest explained intuitively
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-10-18T00:00:00">October 18, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		A little fun fact. The image that you see in this post was drawn by Professor Adele Cutler&rsquo;s son. Professor Adele is has worked very closely with Prof. Breiman on Random forest. Prof. Breiman wanted a simple photo that captured the essence of simplicity and comprehensiveness of Random forest algorithm. Let us get started. Random Forests algorithm has always fascinated me. I like how this algorithm can be easily explained to anyone without much hassle.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/improve_runtime_random_forest_r/" rel="bookmark">
+			Improve runtime of Random Forest in R
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-10-13T00:00:00">October 13, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		There are two ways one can write the code to train a random forest model in R. Both the ways are listed below. A normal and frequent way of writing the command to train the random forest model is something like this. rfModel &lt;- randomForest(Survived~. , data = trainSample[, -c(6, 8, 9)])  Notice the ~ sign. We call this the formula way of writing. Another way of writing the command to train the random forest model is shown below.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/install_a_package_particular_version_in_r/" rel="bookmark">
+			How to install a package of a particular version in R
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-10-05T00:00:00">October 05, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I recently tried installing caret package in R using install.packages(&lsquo;caret&rsquo;, dependencies=T) 
+Normally this installation of package works and I continue to work with the functions associated with the package. When I tried including the package using library(caret) 
+I got the following error.
+Error in loadNamespace(j  R was not able to install this dependency package- pbkrtest. So I tried installing it separately, again using install.package(&lsquo;pbkrtest&rsquo;, dependencies=T)
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/shell_commands_for_data_scientist/" rel="bookmark">
+			Shell commands come in handy for a data scientist
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-09-30T00:00:00">September 30, 2016</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I am no expert of shell commands. I have been using them for quite some time and thought I give an attempt to list down the most common commands. I am writing these mostly from the perspective of a data-science guy. Let us get started. I will use the file- ‘data.txt’ to illustrate these commands. ‘data.txt’ is a file having 200 rows and 8 columns. You can access the data here.
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/posts/roc_and_auc_three_letter_acronym/" rel="bookmark">
@@ -136,71 +212,6 @@
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/posts/2016-06-22-hive_data_science/" rel="bookmark">
-			
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Title: Understanding HIVE for data science people date: 2016-06-22 04:43 comments: true slug: understanding_hive_data_science Category: Big Data Tags: hive, hadoop, big data, manish barnwal description: This post is meant for data science folks who want to use and understand HIVE Keywords: Hive, hadoop, big data, , manish barnwal
-I have been working as Statistical analyst for the last 1.5 years and fortunately I got to work on Hadoop on one of my initial projects.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/posts/2017-02-15-adversarial-validation/" rel="bookmark">
-			
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Title: An illustrated introduction to adversarial validation part 1 date: 2017-02-15 8:00 comments: true slug: introduction_to_adversarial_validation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about adversarial validation- an approach to the problem of differently distributed training and test data. Keywords: ML, data science, cross-validation, adversarial-validation, manish barnwal
-You&rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/posts/2017-02-15-git-and-github/" rel="bookmark">
-			
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Title: How to use Git and Github date: 2017-02-15 10:00 comments: true slug: git_and_github Category: ML, Data Science Tags: tutorial, manish barnwal description: This post talks about the usage of git and github Keywords: git, github, manish barnwal
-I had taken this course - How to use git and github some time last year. This post is an amalgamation of the course notes and other tutorials I have completed in understanding git.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/posts/2017-02-16-adversarial-validation-code/" rel="bookmark">
-			
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Title: An illustrated introduction to adversarial validation part 2 date: 2017-02-16 8:00 comments: true slug: introduction_to_adversarial_validation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks about adversarial validation- an approach to the problem of differently distributed training and test data. Keywords: ML, data science, cross-validation, adversarial-validation, manish barnwal
-In the last post we talked about the idea of adversarial validation{:target=&rdquo;_blank&rdquo;} and how it helps the problem when your validation set result doesn&rsquo;t comply with that of test set result.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/posts/2017-03-28-diving-into-h2o/" rel="bookmark">
-			
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Title: Diving into H2O with R date: 2017-03-28 7:00 comments: true slug: h2o_with_r Category: ML, Data Science Tags: tutorial, machine-learning, big data, R, manish barnwal description: This post talks about building machine learning models in H2O using R. Keywords: h2o tutorial, parallel processing, big data, R, manish barnwal
-Do you understand the pain when you have to train advanced machine learning algorithms like Random Forest on huge datasets? When there is a factor column that has way too many number of levels?
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
 			<a href="/posts/2017-05-12-ml-function-estimation/" rel="bookmark">
 			
 			</a>
@@ -210,6 +221,19 @@ Do you understand the pain when you have to train advanced machine learning algo
 	<div class="content list__excerpt post__content clearfix">
 		Title: The essence of machine learning is function estimation date: 2017-05-12 8:00 comments: true slug: machine_learning_function_estimation Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post talks explains how the essence of machine learning is function estimation. Keywords: ML, data science, machine learning explained, manish barnwal
 Machine learning is cool. There is no denying in that. In this post we will try to make it a little uncool, well it will still be cool but you may start looking at it differently.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/2017-05-15-dplyr-tutorial/" rel="bookmark">
+			
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Title: Tutorial on dplyr- a package for data manipulation in R date: 2017-05-15 8:00 comments: true slug: tutorial_on_dplyr Category: ML, Data Science Tags: tutorial, R, machine-learning, manish barnwal description: This post is a tutorial on dplyr - a package for data manipulation in R. Keywords: dplyr, dplyr tutorial, dplyr package, R, data manipulation, manish barnwal
+R is the most used tool in data science. It has no dearth of packages for specific use cases.
 	</div>
 </article>
 </main>
@@ -240,7 +264,7 @@ Machine learning is cool. There is no denying in that. In this post we will try 
 			<li class="widget__item"><a class="widget__link" href="/posts/my-first-hugo-post/">My First Hugo Post</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/types_of_data_recommender_system/">Types of data in recommender systems</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2017-05-03-time-series-forecasting/">Time series and forecasting using R</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/the_curse_of_bias_and_variance/">The curse of bias and variance</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/h2o_with_r/">Diving into H2O with R</a></li>
 		</ul>
 	</div>
 </div>
