@@ -164,69 +164,69 @@ I have already talked about the use cases of docker but if you still want to kno
 </ul>
 
 <p>Once you have the docker-file base, you can build the docker and up the containers by typing
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">docker</span><span style="color:#f92672">-</span><span style="color:#a6e22e">compose</span> <span style="color:#a6e22e">up</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">d</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">build</span>
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Make</span> <span style="color:#a6e22e">sure</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">above</span> <span style="color:#a6e22e">command</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">folder</span> <span style="color:#a6e22e">that</span> <span style="color:#a6e22e">has</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">Docker</span> <span style="color:#a6e22e">file</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker-compose up -d --build
+<span style="color:#75715e"># Make sure you run the above command from the folder that has the Docker file</span>
 
-<span style="color:#a6e22e">If</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">just</span> <span style="color:#a6e22e">want</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">up</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">containers</span>(<span style="color:#a6e22e">once</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">have</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">dockers</span> <span style="color:#a6e22e">built</span>),
-<span style="color:#a6e22e">docker</span><span style="color:#f92672">-</span><span style="color:#a6e22e">compose</span> <span style="color:#a6e22e">up</span>
-<span style="color:#a6e22e">docker</span><span style="color:#f92672">-</span><span style="color:#a6e22e">compose</span> <span style="color:#a6e22e">up</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">d</span>  <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">ups</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">containers</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">background</span> <span style="color:#a6e22e">by</span> <span style="color:#a6e22e">passing</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">d</span> <span style="color:#a6e22e">flag</span></code></pre></div></p>
+If you just want to up the containers<span style="color:#f92672">(</span>once you have your dockers built<span style="color:#f92672">)</span>,
+docker-compose up
+docker-compose up -d  <span style="color:#75715e"># ups the containers in background by passing -d flag</span></code></pre></div></p>
 
 <ul>
 <li><strong>docker images</strong></li>
 </ul>
 
 <p>Lists all the docker images running; it also lists all the containers running.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">docker</span> <span style="color:#a6e22e">images</span></code></pre></div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker images</code></pre></div></p>
 
 <ul>
 <li><p><strong>docker ps</strong>
 Lists all the containers running for the docker image.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">docker ps</code></pre></div></p></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps</code></pre></div></p></li>
 
 <li><p><strong>docker-compose down</strong></p></li>
 </ul>
 
 <p>This will shut down the containers
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">docker<span style="color:#f92672">-</span>compose down</code></pre></div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker-compose down</code></pre></div></p>
 
 <ul>
 <li><strong>docker restart</strong></li>
 </ul>
 
 <p>This will restart the containers of the docker image
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">docker</span> <span style="color:#a6e22e">restart</span></code></pre></div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker restart</code></pre></div></p>
 
 <ul>
 <li><strong>docker logs</strong></li>
 </ul>
 
 <p>If you want to get the logs of processes running on the worker or master, you can do so by using
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">docker logs <span style="color:#f92672">-</span>f docker_worker_1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker logs -f docker_worker_1
 docker logs docker_master
 <span style="color:#75715e"># This will only give you the tail of the logs.</span></code></pre></div></p>
 
 <p>If you want the complete logs, you can do so by passing additional flag. Something like:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">docker</span> <span style="color:#a6e22e">logs</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">f</span> <span style="color:#a6e22e">docker_workder_1</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">since</span> <span style="color:#ae81ff">60</span><span style="color:#a6e22e">m</span>
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">gives</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">logs</span> <span style="color:#a6e22e">since</span> <span style="color:#ae81ff">60</span> <span style="color:#a6e22e">minutes</span></code></pre></div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker logs -f docker_workder_1 --since 60m
+<span style="color:#75715e"># gives you the logs since 60 minutes</span></code></pre></div></p>
 
 <ul>
 <li><strong>docker exec</strong>
 If you want to talk to of one of the machines, say you want to go to the bash of docker_master you do so by typing
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">docker exec <span style="color:#f92672">-</span>it docker_master bash
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it docker_master bash
 <span style="color:#75715e"># This will take you to the bash of the master</span></code></pre></div></li>
 </ul>
 
 <p>I recently wanted to know what all python packages were installed in my docker. I wanted to know the python packages installed in docker_worker_1 container. You can do so by typing
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">docker exec docker_worker_1 pip <span style="color:#66d9ef">list</span></code></pre></div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec docker_worker_1 pip list</code></pre></div></p>
 
 <ul>
 <li><strong>docker cp</strong></li>
 </ul>
 
 <p>If you want to copy files from docker machines say docker_worker1 to the host, you can do so using <em>docker cp</em>, something like this:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">docker cp docker_worker_1<span style="color:#f92672">:&lt;</span><span style="color:#66d9ef">file</span><span style="color:#f92672">-</span>path of <span style="color:#f92672">source</span><span style="color:#f92672">&gt;</span>  <span style="color:#f92672">&lt;</span>folder<span style="color:#f92672">-</span>path of destination<span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker cp docker_worker_1:&lt;file-path of source&gt;  &lt;folder-path of destination&gt;
 
-example<span style="color:#f92672">:</span> docker cp docker_worker_1<span style="color:#f92672">:/</span>tmp<span style="color:#f92672">/</span>some<span style="color:#f92672">-</span>folder<span style="color:#f92672">/</span>some<span style="color:#f92672">-</span>file.txt <span style="color:#ae81ff">.</span></code></pre></div></p>
+example: docker cp docker_worker_1:/tmp/some-folder/some-file.txt .</code></pre></div></p>
 
 <p>Obviously, the above list is not exhaustive. There are many but these are a few that I have used most so far. Let me know in comments what other commands you use. Hit the share button!</p>
 
