@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on MlSense</title>
+    <link>https://mlsense.github.io/tags/git/</link>
+    <description>Recent content in git on MlSense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mlsense.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git and github for data scientists</title>
+      <link>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</guid>
+      <description>Personal realisation It has been close to a year since I shifted to a start-up which incidentally got acquired after a month of my joining. Before this I used to work at WalmartLabs where we always wanted to use a version control system like git but it never took off properly. Now that I am working in this start-up I got to know that just taking a course on git/github doesn&amp;rsquo;t make you a master of this topic.</description>
+    </item>
+    
+  </channel>
+</rss>

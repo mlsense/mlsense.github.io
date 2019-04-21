@@ -31,6 +31,43 @@ This is not an exhaustive list. These are the ones I use frequently. Feel free t
     </item>
     
     <item>
+      <title>git and github for data scientists</title>
+      <link>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</guid>
+      <description>Personal realisation It has been close to a year since I shifted to a start-up which incidentally got acquired after a month of my joining. Before this I used to work at WalmartLabs where we always wanted to use a version control system like git but it never took off properly. Now that I am working in this start-up I got to know that just taking a course on git/github doesn&amp;rsquo;t make you a master of this topic.</description>
+    </item>
+    
+    <item>
+      <title>Creating a virtual environment in Python</title>
+      <link>https://mlsense.github.io/posts/virtual_environment_in_python/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/virtual_environment_in_python/</guid>
+      <description>I was trying to get a virtual environment set up on Python 3 using mkvirtualenv but somehow the virtual environment was getting created on Python 2.7 (my system python). If you already know about virtual environments and why they are useful, you may skip the next two paragraphs. I came to know about virtual environments only recently. Virtual environment helps you create an isolated space wherein whatever packages you install won&amp;rsquo;t have an impact outside the environment.</description>
+    </item>
+    
+    <item>
+      <title>Common docker commands</title>
+      <link>https://mlsense.github.io/posts/common_docker_commands/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/common_docker_commands/</guid>
+      <description>I recently got to know about dockers. And I love it. For those who don&amp;rsquo;t know what dockers are. Here it is. Dockers help in software development in isolated frameworks.
+Say, you are building an application named epsilon-X. epsilon-X relies on packages like numpy, scipy, pandas, other services, and software. Either you install each of these packages on your machine or you create an environment that has all these required packages along with the suitable versions.</description>
+    </item>
+    
+    <item>
+      <title>How to choose the probability cut-off in classification problem</title>
+      <link>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</link>
+      <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</guid>
+      <description>Yesterday, I was taking a session on Data Science for few of my colleagues. The aim was to give a brief overview of machine learning. There were two of us taking the session. We had a rough idea what all we wanted to cover in the two hours session. I started the session starting with what machine learning is. The types of learning - supervised and unsupervised and the examples that fall into each of these.</description>
+    </item>
+    
+    <item>
       <title>Tutorial on dplyr- a package for data manipulation in R</title>
       <link>https://mlsense.github.io/posts/tutorial_on_dplyr/</link>
       <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>

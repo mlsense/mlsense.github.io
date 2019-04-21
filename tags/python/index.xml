@@ -6,18 +6,18 @@
     <description>Recent content in Python on MlSense</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mlsense.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Time series and forecasting using R</title>
-      <link>https://mlsense.github.io/posts/time-series-post/</link>
-      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      <title>Creating a virtual environment in Python</title>
+      <link>https://mlsense.github.io/posts/virtual_environment_in_python/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mlsense.github.io/posts/time-series-post/</guid>
-      <description>Time series forecasting is a skill that few people claim to know. Machine learning is cool. And there are a lot of people interested in becoming a machine learning expert. But forecasting is something that is a little domain specific. Retailers like Walmart, Target use forecasting systems and tools to replenish their products in the stores. An excellent forecast system helps in winning the other pipelines of the supply chain.</description>
+      <guid>https://mlsense.github.io/posts/virtual_environment_in_python/</guid>
+      <description>I was trying to get a virtual environment set up on Python 3 using mkvirtualenv but somehow the virtual environment was getting created on Python 2.7 (my system python). If you already know about virtual environments and why they are useful, you may skip the next two paragraphs. I came to know about virtual environments only recently. Virtual environment helps you create an isolated space wherein whatever packages you install won&amp;rsquo;t have an impact outside the environment.</description>
     </item>
     
   </channel>

@@ -51,6 +51,43 @@ Trying color syntaxing using pygmentize import numpy as np import pandas as pd i
     </item>
     
     <item>
+      <title>git and github for data scientists</title>
+      <link>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/git_and_github_for_data_scientists/</guid>
+      <description>Personal realisation It has been close to a year since I shifted to a start-up which incidentally got acquired after a month of my joining. Before this I used to work at WalmartLabs where we always wanted to use a version control system like git but it never took off properly. Now that I am working in this start-up I got to know that just taking a course on git/github doesn&amp;rsquo;t make you a master of this topic.</description>
+    </item>
+    
+    <item>
+      <title>Creating a virtual environment in Python</title>
+      <link>https://mlsense.github.io/posts/virtual_environment_in_python/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/virtual_environment_in_python/</guid>
+      <description>I was trying to get a virtual environment set up on Python 3 using mkvirtualenv but somehow the virtual environment was getting created on Python 2.7 (my system python). If you already know about virtual environments and why they are useful, you may skip the next two paragraphs. I came to know about virtual environments only recently. Virtual environment helps you create an isolated space wherein whatever packages you install won&amp;rsquo;t have an impact outside the environment.</description>
+    </item>
+    
+    <item>
+      <title>Common docker commands</title>
+      <link>https://mlsense.github.io/posts/common_docker_commands/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/common_docker_commands/</guid>
+      <description>I recently got to know about dockers. And I love it. For those who don&amp;rsquo;t know what dockers are. Here it is. Dockers help in software development in isolated frameworks.
+Say, you are building an application named epsilon-X. epsilon-X relies on packages like numpy, scipy, pandas, other services, and software. Either you install each of these packages on your machine or you create an environment that has all these required packages along with the suitable versions.</description>
+    </item>
+    
+    <item>
+      <title>How to choose the probability cut-off in classification problem</title>
+      <link>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</link>
+      <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</guid>
+      <description>Yesterday, I was taking a session on Data Science for few of my colleagues. The aim was to give a brief overview of machine learning. There were two of us taking the session. We had a rough idea what all we wanted to cover in the two hours session. I started the session starting with what machine learning is. The types of learning - supervised and unsupervised and the examples that fall into each of these.</description>
+    </item>
+    
+    <item>
       <title>Tutorial on dplyr- a package for data manipulation in R</title>
       <link>https://mlsense.github.io/posts/tutorial_on_dplyr/</link>
       <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
@@ -206,57 +243,6 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
       
       <guid>https://mlsense.github.io/posts/big_data_problem/</guid>
       <description>Big data has become a sensation these days. Anyone and everyone wants to use this in their discussions. When I was still in my college and preparing for campus placements, I had attended almost all the pre-placement talks that companies gave to its prospective candidates. American Express was one such company that had talked extensively about big data and hadoop in their presentation. I remember clearly, the blank faces that all of us had.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-05-18-choosing-probability-cut-off-in-classification/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-05-18-choosing-probability-cut-off-in-classification/</guid>
-      <description>Title: How to choose the probability cut-off in classification problem date: 2017-05-18 8:00 comments: true slug: choosing_probability_cut-off_in_classification Category: ML, Data Science Tags: machine-learning, tutorial, manish barnwal description: This post describes how to choose the probability cut-off in classification problem. Keywords: ML, data science, R, classification, probability, cut-off, machine learning, manish barnwal
-Yesterday, I was taking a session on Data Science for few of my colleagues. The aim was to give a brief overview of machine learning.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2017-11-23-docker-commands/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2017-11-23-docker-commands/</guid>
-      <description>Title: Common docker commands date: 2017-11-23 8:00 comments: true slug: common_docker_commands Category: ML, Data Science Tags: machine-learning, tutorial, hacks, manish barnwal description: This post is a tutorial on the commonly used docker commands. Keywords: docker, docker-commands, docker tutorial, manish barnwal
-I recently got to know about dockers. And I love it. For those who don&amp;rsquo;t know what dockers are. Here it is. Dockers help in software development in isolated frameworks.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2018-01-23-creating-virtual-env/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2018-01-23-creating-virtual-env/</guid>
-      <description>Title: Creating a virtual environment in Python date: 2018-01-23 8:00 comments: true slug: virtual_environment_in_python Category: ML, Data Science Tags: python, tutorial, hacks, manish barnwal description: This is a tutorial on how to create a virtual environment in Python. Keywords: virtual environment, python, tutorial, manish barnwal
-I was trying to get a virtual environment set up on Python 3 using mkvirtualenv but somehow the virtual environment was getting created on Python 2.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2018-04-18-git-and-github-for-data-scientists/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2018-04-18-git-and-github-for-data-scientists/</guid>
-      <description>Title: git and github for data scientists date: 2018-04-18 8:00 comments: true slug: git_and_github_for_data_scientists Category: ML, Data Science Tags: python, tutorial, hacks, manish barnwal description: This is a tutorial on git and github for anyone who wants to use it. Keywords: git, github, tutorial, manish barnwal
-It has been close to a year since I shifted to a start-up which incidentally got acquired after a month of my joining. Before this I used to work at WalmartLabs where we always wanted to use a version control system like git but it never took off properly.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mlsense.github.io/posts/2018-06-18-dates-in-python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/2018-06-18-dates-in-python/</guid>
-      <description>Title: Working with dates in Python date: 2018-06-18 8:00 comments: true slug: working_with_dates_in_python Category: ML, Data Science Tags: python, tutorial, hacks, manish barnwal description: This tutorial is on ways to deal with dates in Python. Keywords: date, datetime, python, tutorial, manish barnwal
-I cringe every time I see a date type column in the data. And you may ask why so? Date columns need some methods applied to them
-The reason is I don&amp;rsquo;t normally see date columns in the data I work with so I don&amp;rsquo;t remember the functions and methods that work on dates to get meaningful columns out of the date column in the data.</description>
     </item>
     
   </channel>

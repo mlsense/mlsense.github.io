@@ -6,10 +6,29 @@
     <description>Recent content in ML on MlSense</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mlsense.github.io/tags/ml/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Common docker commands</title>
+      <link>https://mlsense.github.io/posts/common_docker_commands/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/common_docker_commands/</guid>
+      <description>I recently got to know about dockers. And I love it. For those who don&amp;rsquo;t know what dockers are. Here it is. Dockers help in software development in isolated frameworks.
+Say, you are building an application named epsilon-X. epsilon-X relies on packages like numpy, scipy, pandas, other services, and software. Either you install each of these packages on your machine or you create an environment that has all these required packages along with the suitable versions.</description>
+    </item>
+    
+    <item>
+      <title>How to choose the probability cut-off in classification problem</title>
+      <link>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</link>
+      <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/choosing_probability_cut_off_classification/</guid>
+      <description>Yesterday, I was taking a session on Data Science for few of my colleagues. The aim was to give a brief overview of machine learning. There were two of us taking the session. We had a rough idea what all we wanted to cover in the two hours session. I started the session starting with what machine learning is. The types of learning - supervised and unsupervised and the examples that fall into each of these.</description>
+    </item>
     
     <item>
       <title>Tutorial on dplyr- a package for data manipulation in R</title>
