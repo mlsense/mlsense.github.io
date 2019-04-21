@@ -146,20 +146,20 @@
 <div class="content post__content clearfix">
 			
 
-<p>In the last post we talked about the <strong><a href="http://manishbarnwal.com/blog/2017/02/15/introduction_to_adversarial_validation/">idea of adversarial validation</a>{:target=&rdquo;_blank&rdquo;}</strong> and how it helps the problem when your validation set result doesn&rsquo;t comply with that of test set result. In this post, I will share the R code to help achieve the idea of adversarial validation. The data used would be from <strong><a href="https://numer.ai/">Numerai competition</a>{:target=&rdquo;_blank&rdquo;}</strong>.
+<p>In the last post we talked about the <strong><a href="http://manishbarnwal.com/blog/2017/02/15/introduction_to_adversarial_validation/">idea of adversarial validation</a></strong> and how it helps the problem when your validation set result doesn&rsquo;t comply with that of test set result. In this post, I will share the R code to help achieve the idea of adversarial validation. The data used would be from <strong><a href="https://numer.ai/">Numerai competition</a></strong>.
 <br>
 <br></p>
 
 <h3 id="loading-required-packages">Loading required packages</h3>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">library</span>(randomForest)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">library</span>(randomForest)
 <span style="color:#f92672">library</span>(glmnet)
 <span style="color:#f92672">library</span>(data.table)
 <span style="color:#f92672">library</span>(MLmetrics)
 <span style="color:#66d9ef">getwd</span>()
 <span style="color:#66d9ef">dir</span>()</code></pre></div>
-<br>
-<br></p>
+
+<p><br></p>
 
 <h3 id="reading-train-and-test-data-set">Reading train and test data set</h3>
 

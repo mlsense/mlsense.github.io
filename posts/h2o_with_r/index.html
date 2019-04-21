@@ -131,6 +131,9 @@
 <li><a href="#what-is-h2o">What is H2O?</a></li>
 <li><a href="#do-you-need-to-worry-about-how-h2o-converts-your-laptop-to-a-cluster">Do you need to worry about how H2O converts your laptop to a cluster?</a></li>
 <li><a href="#initializing-the-h2o-cluster">Initializing the H2O cluster</a></li>
+<li><a href="#working-with-h2o">Working with H2O</a></li>
+<li><a href="#interaction-of-r-with-the-cluster">Interaction of R with the cluster</a></li>
+<li><a href="#demonstration-on-a-dataset">Demonstration on a dataset</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -171,60 +174,67 @@ Our laptop has multiple cores in it. Most of the laptops these days come with at
 <p>So we now understand what is the use of h2o and how it can make our life easier. Let us now talk about execution.
 You would first need to install the h2o package using</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">install.packages(h2o)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">install.packages(h2o)</code></pre></div>
 
-{{<span style="color:#f92672">/</span> highlight}}
-
-<span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
+<p><br>
 Next, we load the installed package and launch h2o from R.
-<span style="color:#f92672">&lt;</span>div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;highlight&#34;</span><span style="color:#f92672">&gt;&lt;</span>pre style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span><span style="color:#f92672">&gt;&lt;</span>code class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;language-R&#34;</span> data<span style="color:#f92672">-</span>lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;R&#34;</span><span style="color:#f92672">&gt;&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">library</span><span style="color:#f92672">&lt;/</span>span<span style="color:#f92672">&gt;</span>(h2o)
-local_h2o <span style="color:#f92672">&lt;</span>span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span><span style="color:#f92672">&gt;&amp;</span>lt;<span style="color:#f92672">-&lt;/</span>span<span style="color:#f92672">&gt;</span> h2o.init()<span style="color:#f92672">&lt;/</span>code<span style="color:#f92672">&gt;&lt;/</span>pre<span style="color:#f92672">&gt;&lt;/</span>div<span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">library</span>(h2o)
+local_h2o <span style="color:#f92672">&lt;-</span> h2o.init()</code></pre></div></p>
 
+<p>The above will initialize your h2o cluster. Now there are other parameter in <em>h2o.init()</em> but for now let&rsquo;s go with the default settings. Few important parameters to <em>h2o.init()</em> are:</p>
 
-The above will initialize your h2o cluster. Now there are other parameter <span style="color:#66d9ef">in</span> <span style="color:#f92672">*</span>h2o.init()<span style="color:#f92672">*</span> but <span style="color:#66d9ef">for</span> now let<span style="color:#e6db74">&#39;s go with the default settings. Few important parameters to *h2o.init()* are:
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">- *nthreads*: Number of cores of the computer you want to use.
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">- *max_mem_size*: The total RAM size allocated to the cluster.
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">If you are interested in the other input parameters that can be passed, you can read for help by typing ```?h2o.init()``` in R.
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">Once you have initiated the cluster, check if your connection is working using ```h2o.clusterInfo()```.
-</span><span style="color:#e6db74">You should see this line- *R is connected to the H2O cluster along with other details of your initiated cluster*. Now your cluster is ready and you are good to start your coding workflow in h2o.
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">### Working with H2O
-</span><span style="color:#e6db74">There are two ways you can work with h2o. Either with the flow or writing the code in R editor. The h2o flow is like an user interface that can be accessed at **[http://localhost:54321](http://localhost:54321){:target=&#34;_blank&#34;}** after you have initiated the h2o instance using ```h2o.init()```. The other way is to write the code in R. The serious work gets done by writing the code in R.
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">I normally use h2o flow just to create the first base model to see how the base model is doing. H2o flow is easy to get started with. There is no coding involved here. The image below shows the look of h2o flow. You parse in your datasets using the **Data** tab in the top right. The **Model** tab gives you a list of models you can train on your parsed dataset. The flow is pretty easy to go through.
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">![photo of h2o_flow](http://manishbarnwal.com/images/h2o_flow.png)
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">Almost all of the machine learning models are supported in H2o. Some of them being Deep Learning, Generalized Linear Models (GLM), Gradient Boosted Regression (GBM), K-Means, Naive Bayes, Principal Components Analysis (PCA), Principal Components Regression (PCR), Random Forest (RF) and few others.
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">&lt;br&gt;
-</span><span style="color:#e6db74">### Interaction of R with the cluster
-</span><span style="color:#e6db74">1. *The data is not saved in the R workspace*. All data munging occurs in the h2o instance. By the look and feel it is easy to believe that all the processing is taking place in R but that is not true.
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">2. *You are now **not** limited by R&#39;</span>s ability<span style="color:#f92672">*</span> to handle the data but by the amount of memory allocated to your h2o instance.
+<ul>
+<li><p><em>nthreads</em>: Number of cores of the computer you want to use.</p></li>
 
-<span style="color:#ae81ff">3.</span> When the user makes a request, R queries the server via the REST API, which returns a JSON file with the relevant information that R then displays <span style="color:#66d9ef">in</span> the console.
-<span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
-<span style="color:#75715e">### Demonstration on a dataset</span>
-We will try to understand the working of h2o using a classification problem. The problem is simple. The government of a country wants to understand <span style="color:#66d9ef">if</span> its citizens are happy or not.
+<li><p><em>max_mem_size</em>: The total RAM size allocated to the cluster.</p></li>
+</ul>
 
-There are various independent features like <span style="color:#f92672">*</span>WorkStatus<span style="color:#f92672">*</span>, <span style="color:#f92672">*</span>Residence_Region<span style="color:#f92672">*</span>, <span style="color:#f92672">*</span>income<span style="color:#f92672">*</span>, <span style="color:#f92672">*</span>Gender<span style="color:#f92672">*</span>, <span style="color:#f92672">*</span>Unemployed10<span style="color:#f92672">*</span>, <span style="color:#f92672">*</span>Alcohol_Consumption<span style="color:#f92672">*</span> and a few others. There is a response column called <span style="color:#f92672">*</span>Happy<span style="color:#f92672">*</span><span style="color:#ae81ff">.</span> Your task is to classify a citizen as happy or not happy. I will write a follow up post that will involve the code <span style="color:#66d9ef">for</span> the above problem statement.
-<span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;</span>br<span style="color:#f92672">&gt;</span>
-As always, feedbacks and comments are welcomed. Share this with people who are interested <span style="color:#66d9ef">in</span> learning machine learning and data science. Let us talk more of Data Science.</code></pre></div>
+<p><br>
+If you are interested in the other input parameters that can be passed, you can read for help by typing <code>?h2o.init()</code> in R.
+<br>
+<br>
+Once you have initiated the cluster, check if your connection is working using <code>h2o.clusterInfo()</code>.
+You should see this line- <em>R is connected to the H2O cluster along with other details of your initiated cluster</em>. Now your cluster is ready and you are good to start your coding workflow in h2o.
+<br>
+<br></p>
+
+<h3 id="working-with-h2o">Working with H2O</h3>
+
+<p>There are two ways you can work with h2o. Either with the flow or writing the code in R editor. The h2o flow is like an user interface that can be accessed at <strong><a href="http://localhost:54321">http://localhost:54321</a></strong> after you have initiated the h2o instance using <code>h2o.init()</code>. The other way is to write the code in R. The serious work gets done by writing the code in R.
+<br>
+<br>
+I normally use h2o flow just to create the first base model to see how the base model is doing. H2o flow is easy to get started with. There is no coding involved here. The image below shows the look of h2o flow. You parse in your datasets using the <strong>Data</strong> tab in the top right. The <strong>Model</strong> tab gives you a list of models you can train on your parsed dataset. The flow is pretty easy to go through.
+<br>
+<br></p>
+
+<p><img src="http://manishbarnwal.com/images/h2o_flow.png" alt="photo of h2o_flow" /></p>
+
+<p><br>
+<br>
+Almost all of the machine learning models are supported in H2o. Some of them being Deep Learning, Generalized Linear Models (GLM), Gradient Boosted Regression (GBM), K-Means, Naive Bayes, Principal Components Analysis (PCA), Principal Components Regression (PCR), Random Forest (RF) and few others.
+<br>
+<br></p>
+
+<h3 id="interaction-of-r-with-the-cluster">Interaction of R with the cluster</h3>
+
+<ol>
+<li><p><em>The data is not saved in the R workspace</em>. All data munging occurs in the h2o instance. By the look and feel it is easy to believe that all the processing is taking place in R but that is not true.</p></li>
+
+<li><p>*You are now <strong>not</strong> limited by R&rsquo;s ability* to handle the data but by the amount of memory allocated to your h2o instance.</p></li>
+
+<li><p>When the user makes a request, R queries the server via the REST API, which returns a JSON file with the relevant information that R then displays in the console.
+<br>
+<br></p>
+
+<h3 id="demonstration-on-a-dataset">Demonstration on a dataset</h3>
+
+<p>We will try to understand the working of h2o using a classification problem. The problem is simple. The government of a country wants to understand if its citizens are happy or not.</p></li>
+</ol>
+
+<p>There are various independent features like <em>WorkStatus</em>, <em>Residence_Region</em>, <em>income</em>, <em>Gender</em>, <em>Unemployed10</em>, <em>Alcohol_Consumption</em> and a few others. There is a response column called <em>Happy</em>. Your task is to classify a citizen as happy or not happy. I will write a follow up post that will involve the code for the above problem statement.
+<br>
+<br>
+As always, feedbacks and comments are welcomed. Share this with people who are interested in learning machine learning and data science. Let us talk more of Data Science.</p>
 
 		</div>
 		

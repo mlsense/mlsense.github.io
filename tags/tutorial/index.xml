@@ -54,7 +54,8 @@ This is not an exhaustive list. These are the ones I use frequently. Feel free t
       <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part2/</guid>
-      <description>In the last post we talked about the idea of adversarial validation{:target=&amp;rdquo;_blank&amp;rdquo;} and how it helps the problem when your validation set result doesn&amp;rsquo;t comply with that of test set result. In this post, I will share the R code to help achieve the idea of adversarial validation. The data used would be from Numerai competition{:target=&amp;rdquo;_blank&amp;rdquo;}. Loading required packages library(randomForest) library(glmnet) library(data.table) library(MLmetrics) getwd() dir() Reading train and test data set train &amp;lt;- fread(&amp;#34;Data/numerai_training_data.</description>
+      <description>In the last post we talked about the idea of adversarial validation and how it helps the problem when your validation set result doesn&amp;rsquo;t comply with that of test set result. In this post, I will share the R code to help achieve the idea of adversarial validation. The data used would be from Numerai competition. Loading required packages library(randomForest) library(glmnet) library(data.table) library(MLmetrics) getwd() dir() 
+Reading train and test data set train &amp;lt;- fread(&amp;#34;Data/numerai_training_data.</description>
     </item>
     
     <item>
