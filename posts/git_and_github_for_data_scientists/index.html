@@ -127,10 +127,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#personal-realisation">Personal realisation</a>
-<ul>
+<li><a href="#personal-realisation">Personal realisation</a></li>
 <li><a href="#what-is-git">What is git?</a></li>
-</ul></li>
 <li><a href="#whit-is-github">Whit is github?</a></li>
 <li><a href="#cloning-a-repository">Cloning a repository</a></li>
 <li><a href="#stages-in-code-development-using-git">Stages in code development using git</a></li>
@@ -161,7 +159,7 @@ In today&rsquo;s post I will not talk about theory in details. This post is more
 <br>
 <br></p>
 
-<h4 id="what-is-git">What is git?</h4>
+<h3 id="what-is-git">What is git?</h3>
 
 <p>Git is a version control system that allows you to capture snapshot of the progress of your code while you are developing it. There will be many versions of the code you will develop after which you have your final code written. Git allows you to capture and commit these versions so that if later the code breaks you can come back to an earlier working version and start developing from where you left.
 <br>
@@ -199,7 +197,7 @@ If everything ran without giving an error message, you should have the changes r
 
 <p>Push and pull are actions you perform on the <em>remote</em>. But what is remote? git allows you to manage code versions locally, but you need a way to pass on this changes to the outside world. Remote allows you to do so. Remote is a common repository that allows team members to exchange their codes changes with others. Generally, remote is stored in code-hosting services like Github or internal server.</p>
 
-<p>From this excellent <strong><a href="https://stackoverflow.com/questions/5617211/what-is-git-remote-add-and-git-push-origin-master/5617350#5617350">stackoverflow answer</a>{:target=&rdquo;_blank&rdquo;}</strong>.</p>
+<p>From this excellent <strong><a href="https://stackoverflow.com/questions/5617211/what-is-git-remote-add-and-git-push-origin-master/5617350#5617350">stackoverflow answer</a></strong>.</p>
 
 <blockquote>
 <p>As you probably know, git is a distributed version control system. Most operations are done locally. To communicate with the outside world, git uses what are called remotes. These are repositories other than the one on your local disk which you can push your changes into (so that other people can see them) or pull from (so that you can get others changes). The command git remote add origin git@github.com:peter/first_app.gitcreates a new remote called origin located at git@github.com:peter/first_app.git. Once you do this, in your push commands, you can push to origin instead of typing out the whole URL.</p>

@@ -140,7 +140,7 @@ Virtual environment makes it easier to work on more than one project at a time w
 <br>
 If you are on mac, consider <a href="https://github.com/pyenv/pyenv#homebrew-on-macos">installing with Homebrew package manager</a> by typing:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">brew update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew update
 brew install pyenv</code></pre></div>
 
 <p>You can read more on how to install, use and other details <strong><a href="https://github.com/pyenv/pyenv">here</a></strong>.
@@ -151,13 +151,13 @@ brew install pyenv</code></pre></div>
 
 <p>You need to install <code>virtualenvwrapper</code> package using:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install virtualenvwrapper</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install virtualenvwrapper</code></pre></div>
 
 <p><em>virtualenvwrapper</em> helps creating and deleting virtual environments and I have already explained why we need virtual environments.</p>
 
 <p>Once you have it installed, you can easily create an environment say <em>ml_learn_env</em> by typing</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mkvirtualenv ml_learn</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkvirtualenv ml_learn</code></pre></div>
 
 <p>This will activate your virtual environment. You can now install packages in this environment that you need. Any package that you install in this env won&rsquo;t have any impact on anything outside this space.
 <br>
@@ -166,16 +166,16 @@ Many times, you may have to pass the path of the python version along with mkvir
 
 <p>If I do <code>pyenv versions</code> on my terminal, this is what I get.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">system
-<span style="color:#f92672">*</span> <span style="color:#ae81ff">3.4</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span> (set by <span style="color:#f92672">/</span>Users<span style="color:#f92672">/</span>manishb<span style="color:#f92672">-</span>imac<span style="color:#f92672">/.</span>python<span style="color:#f92672">-</span>version)
-<span style="color:#ae81ff">3.5</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">system
+* <span style="color:#ae81ff">3</span>.4.3 <span style="color:#f92672">(</span>set by /Users/manishb-imac/.python-version<span style="color:#f92672">)</span>
+<span style="color:#ae81ff">3</span>.5.2</code></pre></div>
 
 <p>There are three versions of Python on my machine: <em>system</em> - the default Python provided by Mac which is Python 2.7. And then I have Python 3.4.3 (marked by asterisk meaning the current active version) and Python 3.5.2.
 <br>
 <br>
 If I want to make a virtual env corresponding to a particular python version, say 3.4.3 I can pass the path explicitly like</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mkvirtualenv <span style="color:#f92672">-</span>p <span style="color:#f92672">/</span>Users<span style="color:#f92672">/</span>Manish<span style="color:#f92672">/.</span>pyenv<span style="color:#f92672">/</span>versions<span style="color:#f92672">/</span><span style="color:#ae81ff">3.4</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>python ml_learn_env</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkvirtualenv -p /Users/Manish/.pyenv/versions/3.4.3/bin/python ml_learn_env</code></pre></div>
 
 <p>This will definitely have 3.4.3 as the python version on your virtual env - ml_learn_env.
 <br>
