@@ -148,21 +148,19 @@ In this post, I would just share the code snippets for the most common visualisa
 
 <h3 id="barplot">Barplot</h3>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
 geom_bar(mapping <span style="color:#f92672">=</span> aes(x <span style="color:#f92672">=</span> <span style="color:#66d9ef">as.factor</span>(<span style="color:#66d9ef">class</span>))) <span style="color:#f92672">+</span>
 ggtitle(label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Plot of class of vehicle&#39;</span>) <span style="color:#f92672">+</span>
 xlab(<span style="color:#e6db74">&#39;Class of vehicle&#39;</span>) <span style="color:#f92672">+</span> ylab(<span style="color:#e6db74">&#39;Count&#39;</span>)</code></pre></div>
-<br></p>
 
 <h3 id="scatterplot">Scatterplot</h3>
 
 <p>The scatterplot is useful for displaying the relationship between two continuous variables, although it can also be used with one continuous and one categorical variable, or two categorical variables.</p>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggplot(data <span style="color:#f92672">=</span> mpg) <span style="color:#f92672">+</span>
 geom_point(mapping <span style="color:#f92672">=</span> aes(x <span style="color:#f92672">=</span> displ, y <span style="color:#f92672">=</span> hwy)) <span style="color:#f92672">+</span>
 ggtitle(label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Plot of engine size v/s mileage&#39;</span>) <span style="color:#f92672">+</span>
 xlab(<span style="color:#e6db74">&#39;Engine size (litres)&#39;</span>) <span style="color:#f92672">+</span> ylab(<span style="color:#e6db74">&#39;Highway mileage&#39;</span>)</code></pre></div>
-<br></p>
 
 <h3 id="linechart-plot">Linechart plot</h3>
 
@@ -171,8 +169,7 @@ xlab(<span style="color:#e6db74">&#39;Engine size (litres)&#39;</span>) <span st
   ggtitle(label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Plot of engine size v/s mileage&#39;</span>) <span style="color:#f92672">+</span>
   xlab(<span style="color:#e6db74">&#39;Engine size (litres)&#39;</span>) <span style="color:#f92672">+</span> ylab(<span style="color:#e6db74">&#39;Highway mileage&#39;</span>)</code></pre></div>
 
-<p><br>
-I will add a tutorial on visualisation in R using <strong>ggplot2</strong> soon. Did you find the article useful? If you did, share your thoughts in the comments. Hit the share button!</p>
+<p>I will add a tutorial on visualisation in R using <strong>ggplot2</strong> soon. Did you find the article useful? If you did, share your thoughts in the comments. Hit the share button!</p>
 
 		</div>
 		

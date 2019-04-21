@@ -141,7 +141,7 @@
 <p>You&rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters. Overfitting is when the model does well on training data but fails drastically on test data. The reason could be one of the following:</p>
 
 <ol>
-<li><p>The model is trying to map the exact findings of training data to test data instead of generalizing the patterns.</p></li>
+<li><p>The model is trying to map the exact findings of training data to test data instead of generalising the patterns.</p></li>
 
 <li><p>The train data and test data are significantly different from each other i.e. they have not been derived from the same population.
 <br>
@@ -161,7 +161,7 @@ The use of validation data is to understand how the model is expected to perform
 
 <h3 id="the-solution">The solution</h3>
 
-<p>The solution is <strong>adversarial validation</strong>. I got to know about this recently when I started participating in <em><a href="https://numer.ai/">Numerai</a>{:target=&rdquo;_blank&rdquo;}</em> competition and read about this technique on <em><a href="www.fastml.com">fastml</a>{:target=&rdquo;_blank&rdquo;}</em>. Here&rsquo;s how it is done.</p></li>
+<p>The solution is <strong>adversarial validation</strong>. I got to know about this recently when I started participating in <em><a href="https://numer.ai/">Numerai</a></em> competition and read about this technique on <em><a href="www.fastml.com">fastml</a></em>. Here&rsquo;s how it is done.</p></li>
 </ol>
 
 <p><br>
@@ -180,7 +180,7 @@ The use of validation data is to understand how the model is expected to perform
 <p>The starting few rows are now those rows of training data that resembles the most to test data. Take the starting few rows say 30% as your validation set. And the remaining as your train data to train your model.
 <br>
 <br>
-Now, the accuracy metrics on your validation set should be similar to that on the test data. If your model works well on validation data, it should work well on test data. If you are interested in the implementation of what we just talked, head out to <strong><a href="http://manishbarnwal.com/blog/2017/02/16/introduction_to_adversarial_validation/">this post</a>{:target=&rdquo;_blank&rdquo;}</strong> for the part 2 where the code is written in R.
+Now, the accuracy metrics on your validation set should be similar to that on the test data. If your model works well on validation data, it should work well on test data. If you are interested in the implementation of what we just talked, head out to <strong><a href="http://manishbarnwal.com/blog/2017/02/16/introduction_to_adversarial_validation/">this post</a></strong> for the part 2 where the code is written in R.
 <br>
 <br>
 Did you find the article useful? If you did, share your thoughts in the comments. Share this post with people who you think would enjoy reading this. Let&rsquo;s talk more of data-science.</p>

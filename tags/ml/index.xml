@@ -83,7 +83,7 @@ Say, you are building an application named epsilon-X. epsilon-X relies on packag
       
       <guid>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part1/</guid>
       <description>You&amp;rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters. Overfitting is when the model does well on training data but fails drastically on test data. The reason could be one of the following:
- The model is trying to map the exact findings of training data to test data instead of generalizing the patterns.</description>
+ The model is trying to map the exact findings of training data to test data instead of generalising the patterns.</description>
     </item>
     
     <item>

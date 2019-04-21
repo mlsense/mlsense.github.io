@@ -140,7 +140,7 @@ Say, you are building an application named epsilon-X. epsilon-X relies on packag
       
       <guid>https://mlsense.github.io/posts/introduction_to_adversarial_validation_part1/</guid>
       <description>You&amp;rsquo;d have heard about cross-validation - a common technique used in data-science process to avoid overfitting and many a times to tune the optimal parameters. Overfitting is when the model does well on training data but fails drastically on test data. The reason could be one of the following:
- The model is trying to map the exact findings of training data to test data instead of generalizing the patterns.</description>
+ The model is trying to map the exact findings of training data to test data instead of generalising the patterns.</description>
     </item>
     
     <item>
@@ -224,7 +224,7 @@ Error in loadNamespace(j  R was not able to install this dependency package- pbk
       <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://mlsense.github.io/posts/hadoop_streaming/</guid>
-      <description>A few days ago, I had written a post on The Big Data Problem{:target=&amp;rdquo;_blank&amp;rdquo;} which attempted to understand why we need big data and what the fuss is all about. You may want to read it here{:target=&amp;rdquo;_blank&amp;rdquo;}. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.</description>
+      <description>A few days ago, I had written a post on The Big Data Problem which attempted to understand why we need big data and what the fuss is all about. You may want to read it here. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.</description>
     </item>
     
     <item>

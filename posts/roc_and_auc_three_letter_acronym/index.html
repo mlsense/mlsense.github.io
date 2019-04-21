@@ -232,7 +232,7 @@ There is a trade-off between TPR and FPR. Depending on the requirement one can c
 
 <h3 id="what-about-auc">What about AUC?</h3>
 
-<p>AUC is nothing but the area under curve of ROC curve. Let&rsquo;s say we built a logistic regression model that gave us the probabilities for each row. Now we try with probability cut-offs from 0.1 to 1.0 with step size of 0.1 i.e we would have 10 probabilites to try with and corresponding to each of the 10 values we would have corresponding (FPR, TPR). If we plot these values on a graph we would get a graph having 10 points. This 10 point graph is what we call an ROC curve and the area under this graph is called AUC.
+<p>AUC is nothing but the area under curve of ROC curve. Let&rsquo;s say we built a logistic regression model that gave us the probabilities for each row. Now we try with probability cut-offs from 0.1 to 1.0 with step size of 0.1 i.e we would have 10 probabilities to try with and corresponding to each of the 10 values we would have corresponding (FPR, TPR). If we plot these values on a graph we would get a graph having 10 points. This 10 point graph is what we call an ROC curve and the area under this graph is called AUC.
 <br>
 <br>
 The AUC is a common evaluation metric for binary classification problems. Consider a plot of the true positive rate vs the false positive rate as the threshold value for classifying an item as 0 or is increased from 0 to 1: if the classifier is very good, the true positive rate will increase quickly and the area under the curve will be close to 1. If the classifier is no better than random guessing, the true positive rate will increase linearly with the false positive rate and the area under the curve will be around 0.5.

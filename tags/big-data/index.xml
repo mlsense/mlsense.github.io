@@ -17,7 +17,7 @@
       <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://mlsense.github.io/posts/hadoop_streaming/</guid>
-      <description>A few days ago, I had written a post on The Big Data Problem{:target=&amp;rdquo;_blank&amp;rdquo;} which attempted to understand why we need big data and what the fuss is all about. You may want to read it here{:target=&amp;rdquo;_blank&amp;rdquo;}. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.</description>
+      <description>A few days ago, I had written a post on The Big Data Problem which attempted to understand why we need big data and what the fuss is all about. You may want to read it here. Having understood why we need big data, let’s understand how we can go about analyzing the same. What is the way out to do analysis on big data? The solution is Streaming…Hadoop Streaming.</description>
     </item>
     
     <item>
