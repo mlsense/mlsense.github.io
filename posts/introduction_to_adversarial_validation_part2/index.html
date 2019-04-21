@@ -159,11 +159,9 @@
 <span style="color:#66d9ef">getwd</span>()
 <span style="color:#66d9ef">dir</span>()</code></pre></div>
 
-<p><br></p>
-
 <h3 id="reading-train-and-test-data-set">Reading train and test data set</h3>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">train <span style="color:#f92672">&lt;-</span> fread(<span style="color:#e6db74">&#34;Data/numerai_training_data.csv&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">train <span style="color:#f92672">&lt;-</span> fread(<span style="color:#e6db74">&#34;Data/numerai_training_data.csv&#34;</span>)
 train <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">as.data.frame</span>(train)
 train<span style="color:#f92672">$</span>target <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">as.factor</span>(train<span style="color:#f92672">$</span>target)
 
@@ -175,15 +173,11 @@ test <span style="color:#f92672">&lt;-</span> fread(<span style="color:#e6db74">
 test <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">as.data.frame</span>(test)
 <span style="color:#66d9ef">dim</span>(test) <span style="color:#75715e"># has close to 150000 rows and having no missing values</span>
 <span style="color:#66d9ef">head</span>(test)</code></pre></div>
-<br>
-<br></p>
 
 <h3 id="creating-the-target-variable-to-distinguish-between-train-and-test-data">Creating the target variable to distinguish between train and test data</h3>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">train<span style="color:#f92672">$</span>isTest <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># assigning 0 for train and 1 for test data</span>
 test<span style="color:#f92672">$</span>isTest <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span></code></pre></div>
-
-<p><br></p>
 
 <h3 id="combining-train-and-test-data-into-a-single-data-frame">Combining train and test data into a single data frame</h3>
 
@@ -192,15 +186,11 @@ combi<span style="color:#f92672">$</span>isTest <span style="color:#f92672">&lt;
 combi <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">as.data.frame</span>(combi)
 str(combi)</code></pre></div>
 
-<p><br></p>
-
 <h3 id="train-a-classifier-to-identify-whether-data-comes-from-the-train-or-test-set">Train a classifier to identify whether data comes from the train or test set</h3>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">logitMod <span style="color:#f92672">&lt;-</span> glm(formula <span style="color:#f92672">=</span> isTest<span style="color:#f92672">~</span><span style="color:#ae81ff">.</span> , data <span style="color:#f92672">=</span> combi, family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;binomial&#39;</span>)
 <span style="color:#66d9ef">summary</span>(logitMod)
 <span style="color:#66d9ef">head</span>(logitMod<span style="color:#f92672">$</span>fitted.values)</code></pre></div>
-
-<p><br></p>
 
 <h3 id="predict-on-the-training-data-to-see-which-rows-resembles-most-to-the-test-data">Predict on the training data to see which rows resembles most to the test data</h3>
 
@@ -210,8 +200,6 @@ str(combi)</code></pre></div>
 trainData <span style="color:#f92672">&lt;-</span> train
 <span style="color:#66d9ef">head</span>(trainData)
 trainData<span style="color:#f92672">$</span>predictTest <span style="color:#f92672">&lt;-</span> pred</code></pre></div>
-
-<p><br></p>
 
 <h3 id="sort-the-training-data-by-it-s-probability-of-being-in-the-test-set">Sort the training data by it’s probability of being in the test set</h3>
 
@@ -225,8 +213,6 @@ valData <span style="color:#f92672">&lt;-</span> trainData[valIndx, colsToKeep]
 
 write.csv(trainFinal, <span style="color:#e6db74">&#39;trainfinal.csv&#39;</span>, row.names <span style="color:#f92672">=</span> F, quote <span style="color:#f92672">=</span> F)</code></pre></div>
 
-<p><br></p>
-
 <h3 id="build-a-random-forest-classifier-to-predict-the-target-variable">Build a random forest classifier to predict the &lsquo;target&rsquo; variable</h3>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#66d9ef">set.seed</span>(<span style="color:#ae81ff">1</span>) <span style="color:#75715e"># setting seed for reproducibility of the result</span>
@@ -237,17 +223,13 @@ response <span style="color:#f92672">&lt;-</span> trainFinal[, <span style="colo
 
 rfMod <span style="color:#f92672">&lt;-</span> randomForest(x <span style="color:#f92672">=</span> matX, y <span style="color:#f92672">=</span> response, ntree <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>, mtry <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>) <span style="color:#75715e"># training randomForest model</span></code></pre></div>
 
-<p><br></p>
-
 <h3 id="prediction-on-validation-set">Prediction on validation set</h3>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">rfValPreds <span style="color:#f92672">&lt;-</span> predict(rfMod, newdata <span style="color:#f92672">=</span> valData, type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prob&#34;</span>)
 <span style="color:#66d9ef">head</span>(valPreds)
 LogLoss(rfLassoValPreds, <span style="color:#66d9ef">as.numeric</span>(<span style="color:#66d9ef">as.character</span>(valData<span style="color:#f92672">$</span>target))) <span style="color:#75715e"># LogLoss function from MLmetrics package</span></code></pre></div>
 
-<p><br>
-The validation set gives a LogLoss of 0.699. Let us see how does this come out on test data set. For this we will predict on the test data and upload the predictions to the site.
-<br>
+<p>The validation set gives a LogLoss of 0.699. Let us see how does this come out on test data set. For this we will predict on the test data and upload the predictions to the site.
 <br></p>
 
 <h3 id="prediction-on-actual-test-data">Prediction on actual test data</h3>
@@ -259,8 +241,7 @@ submission <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">
 <span style="color:#66d9ef">head</span>(submission)
 write.csv(submission, <span style="color:#e6db74">&#39;submission.csv&#39;</span>, row.names <span style="color:#f92672">=</span> F, quote <span style="color:#f92672">=</span> F)</code></pre></div>
 
-<p><br>
-The predictions on test data shows a LogLoss of 0.694 which is same as that of the validation set. We can now hope to have same result on both validation set and test set.
+<p>The predictions on test data shows a LogLoss of 0.694 which is same as that of the validation set. We can now hope to have same result on both validation set and test set.
 <br>
 <br>
 Did you find the article useful? If you did, share your thoughts in the comments. Share this post with people who you think would enjoy reading this. Let&rsquo;s talk more of data-science.</p>
