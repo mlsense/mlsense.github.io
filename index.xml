@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MlSense</title>
+    <title>MlQuest</title>
     <link>https://mlsense.github.io/</link>
-    <description>Recent content on MlSense</description>
+    <description>Recent content on MlQuest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Apr 2019 16:56:04 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 17 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mlsense.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,17 +18,6 @@
       
       <guid>https://mlsense.github.io/about/</guid>
       <description>I am a Data Scientist at Zeta Global building recommendation engines for media publishing houses. These days I am learning how recommendation engines work, exploring techniques like matrix factorization, factorization machines, and others. I have started using Python and I am loving it! I am a graduate from IIT Kharagpur with a Masters in Mathematics and Computing. I have picked up much of my understanding of machine learning at @WalmartLabs where I worked as Sr.</description>
-    </item>
-    
-    <item>
-      <title>My First Hugo Post</title>
-      <link>https://mlsense.github.io/posts/my-first-hugo-post/</link>
-      <pubDate>Wed, 17 Apr 2019 16:56:04 +0530</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/my-first-hugo-post/</guid>
-      <description> Hello world,
-I am trying to create a site using Hugo static site generator. This is a markdown page.
-Trying color syntaxing using pygmentize import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns # Add comment here  Using hugo syntax highlight # Loading required packages import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns </description>
     </item>
     
     <item>

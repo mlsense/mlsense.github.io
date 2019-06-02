@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on MlSense</title>
+    <title>Posts on MlQuest</title>
     <link>https://mlsense.github.io/posts/</link>
-    <description>Recent content in Posts on MlSense</description>
+    <description>Recent content in Posts on MlQuest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Apr 2019 16:56:04 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mlsense.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>My First Hugo Post</title>
-      <link>https://mlsense.github.io/posts/my-first-hugo-post/</link>
-      <pubDate>Wed, 17 Apr 2019 16:56:04 +0530</pubDate>
-      
-      <guid>https://mlsense.github.io/posts/my-first-hugo-post/</guid>
-      <description> Hello world,
-I am trying to create a site using Hugo static site generator. This is a markdown page.
-Trying color syntaxing using pygmentize import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns # Add comment here  Using hugo syntax highlight # Loading required packages import numpy as np import pandas as pd import matplotlip.pyplot as plt import seaborn as sns </description>
-    </item>
     
     <item>
       <title>Types of data in recommender systems</title>
