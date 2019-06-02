@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Amazon&#39;s item-item Collaborative filtering recommendation algorithm [paper summary]</title>
+      <link>https://mlsense.github.io/posts/types_of_data_recommender_system/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mlsense.github.io/posts/types_of_data_recommender_system/</guid>
+      <description>This paper published in 2003 by Amazon explains how their basic recommendation algorithm works and is one of the papers that anyone interested in recommendation systems should give a read. I have been working in RS (recommender systems) domain at my present company for the last two years. Since the paper is dated almost fifteen years back, the algorithm may sound basic to you but it still works today. The paper starts with talking about the different class of techniques we have for RS and why they do not work for Amazon and then it finally talks about their item-to-item collaborative filtering algorithm.</description>
+    </item>
+    
+    <item>
       <title>My First Hugo Post</title>
       <link>https://mlsense.github.io/posts/my-first-hugo-post/</link>
       <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>

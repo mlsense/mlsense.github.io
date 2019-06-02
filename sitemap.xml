@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://mlsense.github.io/posts/types_of_data_recommender_system/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mlsense.github.io/</loc>
     <lastmod>2019-06-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -26,19 +31,19 @@
   
   <url>
     <loc>https://mlsense.github.io/tags/</loc>
-    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlsense.github.io/tags/recommendation-system/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mlsense.github.io/posts/types_of_data_recommender_system/</loc>
     <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mlsense.github.io/tags/recommendation-system/</loc>
-    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
