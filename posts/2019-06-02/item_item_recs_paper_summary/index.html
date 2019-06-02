@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Amazon&#39;s item-item Collaborative filtering recommendation algorithm [paper summary] - MlQuest</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="This post is a summary of the paper published by Amazon on item-item Collaborative filtering recommendation algorithm.">
+	<meta property="og:title" content="Amazon&#39;s item-item Collaborative filtering recommendation algorithm [paper summary]" />
+<meta property="og:description" content="This post is a summary of the paper published by Amazon on item-item Collaborative filtering recommendation algorithm." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mlsense.github.io/posts/2019-06-02/item_item_recs_paper_summary/" />
+<meta property="article:published_time" content="2019-06-02T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-06-02T00:00:00&#43;00:00"/>
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Amazon&#39;s item-item Collaborative filtering recommendation algorithm [paper summary]"/>
+<meta name="twitter:description" content="This post is a summary of the paper published by Amazon on item-item Collaborative filtering recommendation algorithm."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="MlQuest" rel="home">
+				<div class="logo__title">MlQuest</div>
+				<div class="logo__tagline">Your quest for machine learning ends here</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">Blog</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">About</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Amazon&#39;s item-item Collaborative filtering recommendation algorithm [paper summary]</h1>
+
+			
+
+
+<style>
+#share-buttons {
+  position: fixed;
+  top: calc((100% - 180px)/2);
+  left: 0px;
+}
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook {background-color: #3B5998;}
+#share-buttons > div.twitter {background-color: #55ACEE;}
+#share-buttons > div.linkedin {background-color: #0077b5;}
+#share-buttons > div.pinterest {background-color: #CB2027;}
+#share-buttons > div.gplus {background-color: #dd4b39;}
+#share-buttons > div.mail {background-color: #7D7D7D;}
+#share-buttons > div.instagram {background-color: #C73B92;}
+
+#share-buttons > div > svg {
+  height: 32px;
+  width: 32px;
+  margin: 4px;
+  fill: #fff;
+}
+
+#share-buttons > div.mail > svg {
+  height: 30px;
+  width: 30px;
+}
+</style>
+
+
+<span style="color: silver;"></span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="gplus" title="Share this on Google Plus" onclick="window.open('https://plus.google.com/share?url=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 2304 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+
+
+
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-06-02T00:00:00">June 02, 2019</time>
+</div>
+</div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-content-based-or-search-based">1. Content-based (or search-based)</a></li>
+<li><a href="#2-cluster-based">2. Cluster-based</a></li>
+<li><a href="#3-collaborative-filtering">3. Collaborative filtering</a></li>
+<li><a href="#4-item-to-item-collaborative-filtering">4. Item-to-item collaborative filtering</a></li>
+<li><a href="#generating-item-to-item-similarity-table">Generating item-to-item similarity table</a></li>
+<li><a href="#generating-recommendations-online">Generating recommendations online</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			
+
+<p><a href="https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf">This paper</a> published in 2003 by Amazon explains how their basic recommendation algorithm works and is one of the papers that anyone interested in recommendation systems should give a read. I have been working in RS (recommender systems) domain at my present company for the last two years. Since the paper is dated almost fifteen years back, the algorithm may sound basic to you but it still works today. 
+<br>
+<br>
+The paper starts with talking about the different class of techniques we have for RS and why they do not work for Amazon and then it finally talks about their item-to-item collaborative filtering algorithm. 
+<br>
+<br>
+Some of the pain points of large e-commerce companies which stops them to use traditional algorithms are:
+1. Amazon has tens of millions of customers and millions of items. Traditional RS mostly are good for toy-datasets but they fail as soon as your data becomes huge and scalability issues come into the picture.
+<br>
+<br>
+2. A lot of their users are first-time users who have not made any transactions yet. Cold-start problems are not solved using conventional RS techniques.
+<br>
+<br>
+Below are the conventional RS techniques and the problems associated with them.</p>
+
+<h3 id="1-content-based-or-search-based">1. Content-based (or search-based)</h3>
+
+<p>As the name suggests, it takes into considerations the content or the features as input to build the RS. This system relies just on the content/feature of the item that the user has interacted with. It is based on keywords and so do not generate interesting/new recommendations. 
+<br>
+<br>
+The results from content-based are almost always obvious and there is no sense of novelty or serendipity. The recommendations from this system are narrow in scope and limited to what the user has viewed. For eg., if a user has watched the Godfather movie, chances are the user will mostly be recommended movies from the same genre i.e. drama. RS are supposed to give you suggestions that are not obvious and the content-based RS fails drastically on this front.
+Content-based RS produce good results when the number of users and items are relatively smaller which is clearly not the case with Amazon.
+<br>
+<br></p>
+
+<h3 id="2-cluster-based">2. Cluster-based</h3>
+
+<p>In this RS, users are clustered into some number of segments based on some features. Each of these segments now represents a class of customers who have similar tastes within the same class. When a new user comes, she is mapped to the closest segment based on the affinity (distance-based or some other similarity metric). This user is then recommended items that the users in the segment have interacted with. 
+<br>
+<br>
+This technique is scalable since the cluster generation will be done offline but the <strong>recommendation generated from this is of poor quality</strong>. 
+<br>
+<br>
+Will a cluster of some number of segments (say 5) be enough to represent the behavior and tastes of all your customers? One can say that making the clusters more granular (increasing the number of clusters) will help in forming more specific clusters, but this will lead to increase in time taken to map the user to one of the segments (now that we have a huge number of segments)
+<br>
+<br>
+How do you find the optimal number of segments? Finding the optimal number of segments and be assured that the segments generated are the best ones is one of the major problems of this method.
+<br>
+<br></p>
+
+<h3 id="3-collaborative-filtering">3. Collaborative filtering</h3>
+
+<p>This technique is computationally expensive. For M users and N items, its time complexity is O(M*N) in the worst case but since the data is mostly sparse i.e. a user only buys a handful of items out of the whole lot, the complexity is approximately O(M + N). Today there are methods of dimensionality reduction that converts the hugely sparse interaction matrix to a dense one using techniques like matrix factorization. Since the paper was written in 2003, a lot of these techniques were not that developed during that time. Research in RS peaked in 2006 after Netflix announced prize money of 1 million dollars for their competition. 
+Cold start problem is obviously there with collaborative filtering. If a new user comes, collaborative filtering won&rsquo;t be able to recommend an item for her. 
+<br>
+<br></p>
+
+<h3 id="4-item-to-item-collaborative-filtering">4. Item-to-item collaborative filtering</h3>
+
+<p>Rather than relying on finding similar customers, item-to-item CF matches each of the user&rsquo;s purchased items to similar items and then combine those similar items into a recommendation list.
+To determine which items are similar to an item (say seed-item), the method looks at items that were purchased together with seed-item and find the similarity between them.
+<br>
+<br></p>
+
+<h3 id="generating-item-to-item-similarity-table">Generating item-to-item similarity table</h3>
+
+<p><strong>Pseudo-code</strong>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> each item <span style="color:#f92672">in</span> product catalog (I1)
+    <span style="color:#66d9ef">for</span> each customer who bought I1 (C1)
+        <span style="color:#66d9ef">for</span> each item bought by customer (I2)
+            similarity(I1, I2)</code></pre></div></p>
+
+<p>There are two issues with the above calculation of item-to-item similarity table. </p>
+
+<p><strong>1. Offline computation</strong>
+First, the time complexity of this table is too huge. In the worst case, it is O(N^²M) but since most customers interact only with a fraction of items, its time complexity will ideally be O(N*M). And that is why this similarity table is to be computed offline. For larger datasets, scalable RS must perform expensive computations offline.
+<br>
+<br>
+<strong>2. Calculating similarity between items</strong>
+Second, how do we go about finding the similarity between the items? The simplest approach is to calculate the cosine similarity between each item pair&rsquo;s item vectors. Each item vector is M dimensional which represents the customers who bought that item.
+<br>
+<br></p>
+
+<h3 id="generating-recommendations-online">Generating recommendations online</h3>
+
+<p>Once we have the similarity table, we can go about generating recommendations for a user&rsquo;s purchase by finding the similar items corresponding to each item in the user&rsquo;s purchase and generate the final recommendation list based on the choosing the most popular similar item or correlation between them. This process is not expensive at all and is done online (as it has to just look into the similarity table that was computed offline).
+<br>
+<br></p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>The most important point to keep in mind is that the most expensive task of calculating the item-item similarity table is done offline and the task to generate recommendations for a user&rsquo;s purchased items is done real-time as it only depends on the items purchased by the user and not at all on the number of items in the product catalog of Amazon. 
+This reduces the time significantly and thus makes the item-to-item collaborative filtering approach scalable. And because the algorithm recommends highly correlated similar items, recommendation quality is excellent.</p>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/recommendation-system/" rel="tag">recommendation system</a></li>
+	</ul>
+</div>
+		
+
+
+<style>
+#share-buttons-footer {display: inline-block; vertical-align: middle; }
+#share-buttons-footer:after {content: ""; display: block; clear: both;}
+#share-buttons-footer > div {
+position: relative;
+text-align: left;
+height: 36px;
+width: 32px;
+float: left;
+text-align: center;
+left: 150 px;
+}
+#share-buttons-footer > div > svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
+
+#share-buttons-footer > div:hover {cursor: pointer;}
+#share-buttons-footer > div.facebook > svg {fill: #3B5998;}
+#share-buttons-footer > div.twitter > svg {fill: #55ACEE;}
+#share-buttons-footer > div.linkedin > svg {fill: #0077b5;}
+#share-buttons-footer > div.pinterest > svg {fill: #CB2027;}
+#share-buttons-footer > div.gplus > svg {fill: #dd4b39;}
+#share-buttons-footer > div.mail > svg {fill: #7D7D7D;}
+#share-buttons-footer > div.instagram > svg {fill: #C73B92;}
+
+#share-buttons-footer > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons-footer > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons-footer > div.linkedin > svg {height: 19px; margin-top: 7px;}
+#share-buttons-footer > div.pinterest > svg {height: 20px; margin-top: 9px;}
+#share-buttons-footer > div.gplus > svg {height: 17px; margin-top: 9px; position: relative; left: 1px;}
+#share-buttons-footer > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: silver;">Share on: </span><div id="share-buttons-footer">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="gplus" title="Share this on Google Plus" onclick="window.open('https://plus.google.com/share?url=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 2304 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/mlsense.github.io\/\/posts\/2019-06-02\/item_item_recs_paper_summary\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+
+
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/my-first-hugo-post/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">My First Hugo Post</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mlsense-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://mlsense.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2019-06-02/item_item_recs_paper_summary/">Amazon&#39;s item-item Collaborative filtering recommendation algorithm [paper summary]</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/my-first-hugo-post/">My First Hugo Post</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/types_of_data_recommender_system/">Types of data in recommender systems</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/git_and_github_for_data_scientists/">git and github for data scientists</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/virtual_environment_in_python/">Creating a virtual environment in Python</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/ManishFirewall" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/manish-barnwal-9b364a17" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/username" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 MlQuest.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
